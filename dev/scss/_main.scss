@@ -57,11 +57,13 @@ input[type="submit"]{
     position: absolute;
     right: 0;
     top: 10px;
+    visibility: hidden;
   }
 
   &:hover::after{
     width:23px;
     animation: legs 1s steps(5) infinite, crawl 3s linear forwards 1;
+    visibility: visible;
   }
 }
 

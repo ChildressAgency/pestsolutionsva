@@ -72,3 +72,40 @@
     }
   }
 }
+
+#pest-management-links{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  .pest-links{
+    list-style: none;
+    padding-left: 0;
+
+    li{
+      display: inline-block;
+    }
+  }
+
+  .pest-link{
+    display: block;
+    height: 160px;
+    width: 160px;
+    margin: 20px;
+    background-image: url(images/sprites.png);
+    background-repeat: no-repeat;
+
+    &#mosquito-link{
+      background-position: 0px -140px
+    }
+    &#bees-link{
+      background-position: -160px -140px;
+    }
+    &#mice-link{
+      background-position: -330px -140px;
+    }
+    &#ants-link{
+      background-position: -490px -140px;
+    }
+  }
+}
