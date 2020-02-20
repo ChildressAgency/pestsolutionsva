@@ -2,11 +2,13 @@
 
 
 .hp-hero{
+  background-image: url(images/hero-squirrel.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   padding-top: 60px;
   padding-bottom: 60px;
+  transition: background-image 1s linear;
 
   .hero-caption{
     h1{
