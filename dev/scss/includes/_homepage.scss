@@ -1,0 +1,74 @@
+#hp-about-cards{
+  background-color: $color-main;
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  h2{
+    font-size: 36px;
+    font-weight: $font-weight-bold;
+    color: $color-alt;
+    text-align: center;
+  }
+
+  .about-card{
+    text-align: center;
+    padding-top: 150px;
+    position: relative;
+    margin-top: 40px;
+
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url(images/sprites.png);
+      background-repeat: no-repeat;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &#about-card-1::before{
+      background-position: 0 0;
+      height: 117px;
+      width: 184px;
+    }
+    &#about-card-2::before{
+      background-position: -196px 0px;
+      height: 126px;
+      width: 125px;
+    }
+    &#about-card-3::before{
+      background-position:-334px 0px;
+      height: 127px;
+      width: 109px;
+    }
+
+    h3{
+      font-size: 30px;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#years{
+  background-image: url(images/treating-bushes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  .years-content{
+    background-color: rgba(255, 255, 255, .6);
+    padding: 60px 15px;
+
+    h2{
+      font-size: 44px;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+
+    p{
+      font-size: 24px;
+    }
+  }
+}

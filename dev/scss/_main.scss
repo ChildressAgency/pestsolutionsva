@@ -9,7 +9,13 @@ body{
 }
 
 a{
+  color: $color-alt;
   transition: all .3s ease;
+
+  &:hover,
+  &:focus{
+    color: $color-alt;
+  }
 }
 
 input[type="submit"]{
