@@ -12,6 +12,10 @@ a{
   transition: all .3s ease;
 }
 
+input[type="submit"]{
+  transition: all .3s ease;
+}
+
 .btn-main{
   display: inline-block;
   font-size: 20px;

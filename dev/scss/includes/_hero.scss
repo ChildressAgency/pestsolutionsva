@@ -1,0 +1,47 @@
+
+
+
+.hp-hero{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .hero-caption{
+    h1{
+      font-size: 63px;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      text-align: right;
+      text-shadow: 5px 5px 10px #000;
+
+      span{
+        display: block;
+        font-weight: $font-weight-normal;
+        font-size: .8em;
+      }
+    }
+  }
+}
+
+.hero-contact-form{
+  background-color: $color-main;
+  padding: 20px;
+  color: #fff;
+
+  input[type="submit"]{
+    border: 1px solid $color-alt;
+  }
+
+  h3{
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: $font-weight-black;
+  }
+
+  .form-control{
+    border-radius: 0;
+  }
+}
