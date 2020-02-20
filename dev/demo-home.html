@@ -16,39 +16,37 @@
 
 <body>
   <header id="header">
-    <div id="masthead" class="navbar navbar-expand-md">
+    <div id="masthead" class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <div class="navbar-collapse navmenu">
-          <a href="#call-us-modal" id="callus" data-target="#call-us-modal">
-            <span class="cell-phone">
-              <svg>
-                <use xlink:href="#icon-cell-phone" />
-              </svg>
-            </span>
+        <div class="collapse navbar-collapse navmenu">
+          <a href="#callus-modal" id="callus" data-toggle="modal" data-target="#callus-modal">
+            <svg class="cell-phone">
+              <use xlink:href="#icon-cell-phone" />
+            </svg>
             CALL US
           </a>
 
-          <div class="social-search">
-            <a href="#" class="btn-main btn-round bug-crawler">Client Login</a>
-            <div class="social">
+          <div class="social-search ml-auto d-flex">
+            <a href="#" class="btn-main btn-round bug-crawler mr-lg-4">Client Login</a>
+            <div class="social mr-3">
               <a href="#" id="facebook" aria-label="Facebook">
-                <svg>
+                <svg class="social-icon">
                   <use xlink:href="#icon-facebook" />
                 </svg>
               </a>
               <a href="#" id="twitter" aria-label="Twitter">
-                <svg>
+                <svg class="social-icon">
                   <use xlink:href="#icon-twitter" />
                 </svg>
               </a>
             </div>
 
             <div class="search">
-              <div class="input-group">
+              <div class="input-group flex-nowrap">
                 <input type="search" name="s" id="search" class="search-field" placeholder="Search" />
                 <div class="input-group-append">
                   <button type="submit" id="button-search" class="btn-search" aria-label="Search">
-                    <svg>
+                    <svg class="search-icon">
                       <use xlink:href="#icon-search" />
                     </svg>
                   </button>
@@ -60,25 +58,27 @@
       </div><!-- .container-fluid -->
     </div><!-- #masthead -->
 
-    <nav class="navbar navbar-expand-md">
+    <a href="#" class="navbar-brand d-block d-xl-none mr-0">
+      <img src="../wp-theme-files/images/logo.png" class="img-fluid d-block mx-auto" alt="Pest Solutions Logo" />
+    </a>
+    <nav class="navbar navbar-expand-lg pb-0">
       <div class="container-fluid">
-        <a href="#" class="navbar-brand d-md-none">
-          <img src="../wp-theme-files/images/logo.png" class="img-fluid d-block" alt="Pest Solutions Logo" />
-        </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle Navigation">
-          <span class="navbar-toggler-icon"></span>
+          <svg class="hamburger">
+            <use xlink:href="#icon-bars" />
+          </svg>
         </button>
 
         <div id="header-nav" class="collapse navbar-collapse navmenu">
-          <ul id="left-header-nav" class="navbar-nav">
+          <ul id="left-header-nav" class="navbar-nav align-items-center">
             <li class="nav-item active">
               <a href="#" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">Pest Management</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
               <ul class="dropdown-menu">
                 <li class="nav-item">
@@ -97,11 +97,11 @@
             </li>
           </ul>
 
-          <a class="navbar-brand d-none d-md-flex">
-            <img src="../wp-theme-files/images/logo.png" class="img-fluid d-block" alt="Pest Solutions Logo" />
+          <a class="navbar-brand d-none d-xl-flex">
+            <img src="../wp-theme-files/images/logo.png" class="d-block" alt="Pest Solutions Logo" />
           </a>
 
-          <ul id="right-header-nav" class="navbar-nav">
+          <ul id="right-header-nav" class="navbar-nav align-items-center">
             <li class="nav-item">
               <a href="#" class="nav-link">Do-It-Yourself</a>
             </li>
@@ -115,12 +115,12 @@
               <a href="#" class="nav-link">Contact Us</a>
             </li>
           </ul>
+          <div id="free-inspection" class="ml-auto">
+            <a href="#">Get A Free<br />Inspection</a>
+          </div>
         </div><!-- #header-nav -->
       </div><!-- .container-fluid -->
 
-      <div id="free-inspection">
-        <a href="#">Get A Free Inspection</a>
-      </div>
     </nav>
   </header>
 
@@ -344,18 +344,48 @@
     </div>
   </footer>
 
+  <div id="callus-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 id="modal-label" class="modal-title">Select number to call</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aira-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="callus-modal-number">
+            <h5>First Number</h5>
+            <a href="tel:#">111-111-1111</a>
+          </div>
+          <div class="callus-modal-number">
+            <h5>Second Number</h5>
+            <a href="tel:#">222-222-2222</a>
+          </div>
+          <div class="callus-modal-number">
+            <h5>Third Number</h5>
+            <a href="tel:#">333-333-3333</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <svg xmlns="https://www.w3.org/2000/svg" width="0" height="0" display="none">
     <symbol id="icon-cell-phone" viewBox="0 0 320 512">
-      <path class="fill-alt" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z" />
+      <path d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z" />
     </symbol>
     <symbol id="icon-facebook" viewBox="0 0 320 512">
-      <path class="fill-alt" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+      <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
     </symbol>
     <symbol id="icon-twitter" viewBox="0 0 512 512">
-      <path class="fill-alt" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+      <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
     </symbol>
     <symbol id="icon-search" viewBox="0 0 512 512">
-      <path class="fill-dark-gray" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+      <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+    </symbol>
+    <symbol id="icon-bars" viewBox="0 0 448 512">
+      <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/>
     </symbol>
   </svg>
 
