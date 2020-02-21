@@ -18,10 +18,34 @@ jQuery(document).ready(function($){
       }
 
       //console.log(heroSlides[slideIndex]);
-      $hero.css('background-image', 'url("' + heroSlides[slideIndex] + '")').show(0, function(){ setTimeout(slideShow, 5000); });
+      $hero.css('background-image', 'url("' + heroSlides[slideIndex] + '")')
+           .show(0, function(){ setTimeout(slideShow, 5000); });
       slideIndex++;
     };
 
     slideShow();
   }
+
+  var testimonials = new Swiper('#hp-testimonials .swiper-container', {
+    autoplay: true,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-arrow-next',
+      prevEl: '.swiper-arrow-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    slidesPerView: 1,
+    spaceBetween: 25,
+    breakpoints: {
+      1200: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 2
+      }
+    }
+  });
 });
