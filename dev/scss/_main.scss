@@ -110,3 +110,124 @@ h4{
   text-align: center;
   text-transform: unset;
 }
+
+#services{
+  padding-top: 40px;
+  padding-bottom: 80px;
+
+  h2{
+    font-size: 70px;
+    font-weight: $font-weight-black;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+
+#services-tabs{
+  .nav-item + .nav-item{
+    margin-left: 25px;
+  }
+
+  .nav-link{
+    background-color: $color-main;
+    display: inline-block;
+    height: 190px;
+    width: 190px;
+    position: relative;
+    border-radius: 20px;
+
+    &::after{
+      content: "";
+      background-image: url(images/sprites.png);
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &#termite-service-tab::after{
+      background-position: 0px -330px;
+      height: 140px;
+      width: 79px;
+    }
+    &#mosquito-service-tab::after{
+      background-position: -240px -330px;
+      height: 137px;
+      width: 133px;
+    }
+
+    &:hover,
+    &.active{
+      background-color: $color-alt;
+    }
+  }
+}
+
+#services-content{
+  .card{
+    border: none;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #999;
+  }
+
+  .card-img{
+    background-color: $color-main;
+    position: relative;
+    width: 200px;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url(images/sprites.png);
+      background-repeat: no-repeat;
+    }
+    &#termite-service-img::after{
+      background-position: -90px -328px;
+      height: 238px;
+      width: 133px;
+    }
+    &#mosquito-service-img::after{
+      background-position: -390px -330px;
+      height: 195px;
+      width: 190px;
+    }
+  }
+
+  .card-body{
+    background-color: #f2f2f2;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    h3{
+      font-size: 40px;
+      font-weight: $font-weight-black;
+      font-style: italic;
+    }
+
+    a{
+      display: block;
+      color: $color-main;
+      font-size: 20px;
+      font-weight: $font-weight-black;
+      font-style: italic;
+
+      &:hover,
+      &:focus{
+        color: $color-alt;
+        text-decoration: none;
+      }
+    }
+
+    .learn-more{
+      font-weight: $font-weight-bold;
+    }
+  }
+}
