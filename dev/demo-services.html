@@ -124,202 +124,106 @@
     </nav>
   </header>
 
-  <section id="hero" class="hero" data-hero_images='["C:/Users/JohnCampbell/OneDrive - Childress Agency/ChildressAgency/pestsolutionsva/wp-theme-files/images/hero-squirrel.jpg", "C:/Users/JohnCampbell/OneDrive - Childress Agency/ChildressAgency/pestsolutionsva/wp-theme-files/images/hero-superkid.jpg", "C:/Users/JohnCampbell/OneDrive - Childress Agency/ChildressAgency/pestsolutionsva/wp-theme-files/images/hero-ants.jpg"]' style="background-image:url(../wp-theme-files/images/hero-squirrel.jpg);">
+  <section id="hero" class="hero d-flex align-items-end" style="background-image:url(../wp-theme-files/images/spraying-trees.jpg); background-position:center center;">
     <div class="container">
       <div class="hero-caption">
+        <h1>Solutions to your everyday pests</h1>
+      </div>
+    </div>
+  </section>
+  <div class="free-inspection-banner">
+    <div class="container-fluid">
+      <h2>Get a Free Inspection</h2>
+      <p>Call your nearest location today</p>
+      <ul class="free-inspection-locations">
+        <li><a href="tel:540.288.8585">Stafford / Fredericksburg 540.288.8585</a></li>
+        <li><a href="tel:804.448.1170">Caroline 804.448.1170</a></li>
+        <li><a href="tel:804.550.9005">N. Richmond 804.550.9005</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main">
+    <div class="container-fluid">
+      <section id="services">
+        <h2>Services</h2>
         <div class="row">
-          <div class="col-md-7 col-lg-8 d-flex align-items-center justify-content-end">
-            <h1 data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1000">Safe and Effective<span>Pest Control</span></h1>
+          <div class="col-md-5">
+            <ul id="services-tabs" class="nav nav-pills" role="tablist">
+              <li class="nav-item">
+                <a href="#termite-service" id="termite-service-tab" class="nav-link active" data-toggle="pill" role="tab" aria-controls="termite-service" aria-selected="true" title="Termite Service"></a>
+              </li>
+              <li class="nav-item">
+                <a href="#mosquito-service" id="mosquito-service-tab" class="nav-link" data-toggle="pill" role="tab" aria-controls="termite-service" aria-selected="true" title="MOsquito Service"></a>
+              </li>
+            </ul>
           </div>
-          <div class="col-md-5 col-lg-4">
-            <div class="hero-contact-form" data-aos="fade-left" data-aos-easing="ease-out" data-aos-duration="1000" data-aos-delay="50">
-              <header>
-                <h3>Contact Us Now</h3>
-                <p>Let's get your house pest free today.</p>
-              </header>
-              <div class="form-group">
-                <label for="hero-your-name" class="sr-only">Name*</label>
-                <input type="text" id="hero-your-name" class="form-control" placeholder="NAME*" />
+          <div class="col-md-7">
+            <div id="services-content" class="tab-content">
+              <div id="termite-service" class="tab-pane fade show active" role="tabpanel" aria-labelledby="termite-service-tab">
+                <div class="card">
+                  <div class="card-img"></div>
+                  <div class="card-body">
+                    <h3>Termites</h3>
+                    <p>Statistics show that Virginia may have as many as 10-14 termite colonies in a single acre of land - 3 or 4 of which could easily be situated right under or around your home.<br />These termite colonies constantly forage through the soil looking for food sources, and they don't stop at just one!</p>
+                    <p>Their foraging range will spread beyond the initial food source (your neighbor's house) into an area as large as two acres. At this point, it is only a matter of time before they will reach an adjacent home. In fact, the may be there already!</p>
+                    </p>
+                    <a href="#">VIEW PRICING</a>
+                    <a href="#" class="learn-more">LEARN MORE</a>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="hero-your-email" class="sr-only">Email*</label>
-                <input type="email" id="hero-your-email" class="form-control" placeholder="EMAIL*" />
+              <div id="mosquito-service" class="tab-pane fade" role="tabpanel" aria-labelledby="mosquito-service-tab">
+                <div class="card">
+                  <div class="card-img"></div>
+                  <div class="card-body">
+                    <h3>Mosquitoes</h3>
+                    <p>Six of the most aggressive mosquitoes thrive in our area... THEY COULD BE BREEDING IN YOUR YARD RIGHT NOW!</p>
+                    <p>We will focus on areas where standing water is common and cannot be easily drained (such as plant pots, under gutters and splash guards, low grades, and ditches) that may be identified as high potential mosquito breeding sites.</p>
+                    <a href="#">VIEW PRICING</a>
+                    <a href="#" class="learn-more">LEARN MORE</a>
+                  </div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="hero-phone" class="sr-only">Phone*</label>
-                <input type="text" id="hero-phone" class="form-control" placeholder="PHONE*" />
-              </div>
-              <div class="form-group">
-                <label for="hero-comment" class="sr-only">Comment</label>
-                <textarea id="hero-comment" class="form-control" placeholder="COMMENT"></textarea>
-              </div>
-              <div class="form-group text-right">
-                <input type="submit" class="btn-main" value="SEND" />
-              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <section id="lets-talk">
+    <h2 class="banner-title">Let's Talk</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-7 col-md-5">
+          <div class="contact-form">
+            <h3>Let us know what we can help you with.</h3>
+            <div class="form-group">
+              <label for="your-name" class="sr-only">Name*</label>
+              <input type="text" id="your-name" class="form-control" placeholder="NAME*" />
+            </div>
+            <div class="form-group">
+              <label for="your-email" class="sr-only">Email*</label>
+              <input type="email" id="your-email" class="form-control" placeholder="EMAIL*" />
+            </div>
+            <div class="form-group">
+              <label for="phone" class="sr-only">Phone*</label>
+              <input type="text" id="phone" class="form-control" placeholder="PHONE*" />
+            </div>
+            <div class="form-group">
+              <label for="comments" class="sr-only">Comments</label>
+              <textarea id="comments" class="form-control" placeholder="COMMENTS"></textarea>
+            </div>
+            <div class="form-group text-right">
+              <input type="submit" class="btn-main" value="SEND" />
             </div>
           </div>
         </div>
       </div>
     </div>
+    <img src="../wp-theme-files/images/ants-crawling.png" id="crawling-bugs" class="" alt="" />
   </section>
-
-  <main id="main">
-    <section id="hp-about-cards">
-      <div class="container">
-        <p class="slogan">Safely Controlling Pests from Richmond to Stafford</p>
-        <div class="row">
-          <div class="col-md-4">
-            <div id="about-card-1" class="about-card" data-aos="fade-up">
-              <h3 data-aos="fade" data-aos-delay="500">Our Commitment</h3>
-              <p data-aos="fade" data-aos-delay="500">Our goal is to serve our customers and their families with the highest degree of excellence with exceptional service, integrity, and dedication to the betterment of our communities and the environment. <span>We do NOT use any indoor pesticides</span> and we can effectively treat your problem while safeguarding your family and pets from any harmful pesticides.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div id="about-card-2" class="about-card" data-aos="fade-up">
-              <h3 data-aos="fade" data-aos-delay="500">Locally Owned</h3>
-              <p data-aos="fade" data-aos-delay="500">We are a locally owned and operated company that offers area homeowners and businesses full-service pest, termite and wildlife management programs. We have over 30 years of experience in the <a href="#">pest control</a> field. This experience has directed us to utilize safer and more effective treatment methods to solve our customer's <a href="#">pest control problems</a>.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div id="about-card-3" class="about-card" data-aos="fade-up">
-              <h3 data-aos="fade" data-aos-delay="500">Our Guarantee</h3>
-              <p data-aos="fade" data-aos-delay="500">All of our services and treatment programs are 100% guaranteed. in addition to our Bug Bucks referral program and online coupons, we are proud to offer a 10% discount for those who give so much of themselves (Military, Police, Firemen, and Senior Citizens).</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="years">
-      <div class="container">
-        <div class="col-md-6 offset-md-6">
-          <div class="years-content">
-            <h2>Over 30 Years of Expertise</h2>
-            <p>For the last thirty years our customers have trusted us as their preferred pest service. We use helthier pest control solutions for you and your families, we also do not use any indoor pesticides. We keep our customers' families in mind as we handle your houses' intruders.</p>
-            <a href="#" class="btn-main">Our Packages</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pest-management-links">
-      <div class="container">
-        <div class="pest-links d-flex justify-content-around flex-wrap" data-aos="fade-up">
-          <a href="#" id="mosquito-link" class="pest-link" aria-label="Mosquitoes" title="Mosquitoes"></a>
-          <a href="#" id="bees-link" class="pest-link" aria-label="Bees" title="Bees"></a>
-          <a href="#" id="mice-link" class="pest-link" aria-label="Mice" title="Mice"></a>
-          <a href="#" id="ants-link" class="pest-link" aria-label="Ants" title="Ants"></a>
-        </div>
-        <p>Not only will be get rid of any pesky critters that could be dangerous to your well-being, ask about our other <a href="#">pest control</a> services including tree limb and shrubbery trimming, insulation installation in an attic or crawl space, installation of moisture barrier in crawl space, gutter cleaning, and installation of Leaf Defier System.</p>
-        <h4><a href="#" class="bug-crawler">Read more about</a> our services</h4>
-      </div>
-    </section>
-
-    <section id="hp-testimonials">
-      <div class="container-fluid">
-        <h2>What Our Customers Say</h2>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-
-            <div class="testimonial swiper-slide">
-              <h4>Jordan Daily</h4>
-              <span class="star-rating stars-3"></span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinc facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-            </div>
-
-            <div class="testimonial swiper-slide">
-              <h4>Jordan Daily</h4>
-              <span class="star-rating stars-4"></span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinc facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-            </div>
-
-            <div class="testimonial swiper-slide">
-              <h4>Jordan Daily</h4>
-              <span class="star-rating stars-5"></span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinc facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-            </div>
-
-            <div class="testimonial swiper-slide">
-              <h4>Jordan Daily</h4>
-              <span class="star-rating stars-1"></span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinc facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-            </div>
-
-            <div class="testimonial swiper-slide">
-              <h4>Jordan Daily</h4>
-              <span class="star-rating stars-2"></span>
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinc facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-            </div>
-
-          </div>
-        </div>
-
-          <div class="swiper-arrow-prev">
-            <svg class="swiper-arrow">
-              <use xlink:href="#arrow-prev" />
-            </svg>
-          </div>
-          <div class="swiper-arrow-next">
-            <svg class="swiper-arrow">
-              <use xlink:href="#arrow-next" />
-            </svg>
-          </div>
-
-          <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <section id="hp-affiliations">
-      <div class="container">
-        <h2>Proudly Affiliated With</h2>
-        <div class="affiliations">
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-          <a href="#"><img src="../wp-theme-files/images/affiliate-placeholder.png" class="img-fluid d-block mx-auto" alt="" /></a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-    <section id="lets-talk">
-      <h2 class="banner-title">Let's Talk</h2>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-7 col-md-5">
-            <div class="contact-form">
-              <h3>Let us know what we can help you with.</h3>
-              <div class="form-group">
-                <label for="your-name" class="sr-only">Name*</label>
-                <input type="text" id="your-name" class="form-control" placeholder="NAME*" />
-              </div>
-              <div class="form-group">
-                <label for="your-email" class="sr-only">Email*</label>
-                <input type="email" id="your-email" class="form-control" placeholder="EMAIL*" />
-              </div>
-              <div class="form-group">
-                <label for="phone" class="sr-only">Phone*</label>
-                <input type="text" id="phone" class="form-control" placeholder="PHONE*" />
-              </div>
-              <div class="form-group">
-                <label for="comments" class="sr-only">Comments</label>
-                <textarea id="comments" class="form-control" placeholder="COMMENTS"></textarea>
-              </div>
-              <div class="form-group text-right">
-                <input type="submit" class="btn-main" value="SEND" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img src="../wp-theme-files/images/ants-crawling.png" id="crawling-bugs" class="" alt="" />
-    </section>
 
   <footer id="footer">
     <div class="container-fluid">

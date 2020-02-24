@@ -1,15 +1,15 @@
-.hp-hero{
-  background-image: url(images/hero-squirrel.jpg);
+.hero{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
+  min-height: 600px;
   transition: background-image 1s linear;
 
   .hero-caption{
     h1{
-      font-size: 63px;
+      font-size: 55px;
       color: #fff;
       text-transform: uppercase;
       font-weight: $font-weight-bold;
@@ -38,9 +38,69 @@
     font-size: 32px;
     text-transform: uppercase;
     font-weight: $font-weight-black;
+    color: #fff;
   }
 
   .form-control{
     border-radius: 0;
+  }
+}
+
+.free-inspection-banner{
+  background-color: $color-main;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+
+  h2{
+    color: $color-alt;
+    text-shadow: 5px 5px 10px #000;
+    font-weight: $font-weight-black;
+  }
+
+  p{
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+}
+
+.free-inspection-locations{
+  margin-top: 40px;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  li{
+    padding: 15px;
+
+    a{
+      color: #fff;
+      font-size: 24px;
+
+      &:hover,
+      &:focus{
+        color: $color-alt;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm){
+  .free-inspection-banner{
+    h2{
+      font-size: 70px;
+    }
+  }
+
+  .hero{
+    .hero-caption{
+      h1{
+        font-size: 70px;
+      }
+    }
   }
 }
