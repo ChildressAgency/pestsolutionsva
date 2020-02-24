@@ -122,14 +122,19 @@
 
 #free-inspection{
   background-color: $color-alt-dark;
-  padding: 12px 40px;
+  padding: 12px 40px 18px;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1em;
+  display: inline-block;
+  margin-bottom: -6px;
 
-  a{
-    text-transform: uppercase;
-    font-size: 20px;
-    color: #fff;
-    line-height: 1em;
+  &:hover,
+  &:focus{
+    text-decoration: none;
+    background-color: #380106;
   }
 }
 
@@ -160,5 +165,10 @@
         margin-bottom: 15px;
       }
     }
+  }
+
+  #free-inspection{
+    margin-top: 20px;
+    display: block;
   }
 }
