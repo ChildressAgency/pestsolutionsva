@@ -48,4 +48,24 @@ jQuery(document).ready(function($){
       }
     }
   });
+
+  var beforeAfterGalleryThumbs = new Swiper('.gallery-thumbs', {
+    slidesPerView: 4,
+    slidesPerColumn: 2,
+    spaceBetween: 15,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+      clickable: true
+    },
+
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true
+  });
+  var beforeAfterGalleryMain = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: beforeAfterGalleryThumbs
+    }
+  });
 });
