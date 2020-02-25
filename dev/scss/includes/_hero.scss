@@ -6,9 +6,11 @@
   padding-bottom: 100px;
   min-height: 600px;
   transition: background-image 1s linear;
+  position: relative;
+  z-index: 1;
 
   .hero-caption{
-    h1{
+    .hero-title{
       font-size: 55px;
       color: #fff;
       text-transform: uppercase;
@@ -98,7 +100,7 @@
 
   .hero{
     .hero-caption{
-      h1{
+      .hero-title{
         font-size: 70px;
       }
     }
