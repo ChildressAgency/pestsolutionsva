@@ -381,3 +381,142 @@ article{
     width: 112px;
   }
 }
+
+#diy-kits{
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li{
+    width: 165px;
+    margin: 15px;
+  }
+}
+
+.diy-kit{
+
+  h4{
+    font-size: 18px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: $font-weight-black;
+    font-style: italic;
+    transition: all .2s ease;
+  }
+
+  & + .kit-contents{
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  .diy-icon{
+    width: 165px;
+    height: 165px;
+    background-color: $color-main;
+    position: relative;
+    border-radius: 20px;
+    transition: all .2s ease;
+
+    &::after{
+      content: "";
+      position: absolute;
+      background-image: url(images/sprites.png);
+      background-repeat: repeat;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &#diy-ant::after{
+      background-position: -260px -560px;
+      height: 136px;
+      width: 100px;
+    }
+    &#diy-spider::after{
+      background-position: -369px -560px;
+      height: 146px;
+      width: 107px;
+    }
+    &#diy-roach::after{
+      background-position: -490px -560px;
+      height: 142px;
+      width: 103px;
+    }
+    &#diy-mouse::after{
+      background-position: 0px -720px;
+      height: 100px;
+      width: 148px;
+    }
+    &#diy-cricket::after{
+      background-position: -160px -730px;
+      height: 69px;
+      width: 137px;
+    }
+    &#diy-silverfish::after{
+      background-position: -310px -720px;
+      height: 149px;
+      width: 75px;
+    }
+    &#diy-snake::after{
+      background-position: -400px -720px;
+      height: 108px;
+      width: 105px;
+    }
+  }
+
+  &:hover,
+  &:focus{
+    .diy-icon{
+      background-color: $color-alt;
+    }
+
+    h4{
+      color: $color-alt;
+    }
+
+    & + .kit-contents{
+      opacity: 1;
+    }
+  }
+}
+
+#diy-accordion{
+  max-width: 600px;
+
+  .card{
+    border: none;
+  }
+
+  .card-header{
+    background: transparent;
+    border: none;
+  }
+
+  .opener{
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: $font-weight-black;
+    font-style: italic;
+    color: $color-alt;
+
+    &:focus{
+      outline: none;
+    }
+
+    &.collapsed{
+      color: $color-main;
+    }
+
+    &.collapsed:hover{
+      color: $color-alt;
+      outline: none;
+    }
+  }
+
+  .card-body{
+    padding-top: 0;
+  }
+}
