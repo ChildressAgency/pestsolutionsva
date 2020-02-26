@@ -111,7 +111,8 @@ h4{
   text-transform: unset;
 }
 
-section{
+section,
+article{
   padding-top: 60px;
   padding-bottom: 100px;
 }
@@ -338,5 +339,45 @@ section{
     #gallery-thumbs{
       margin-top: 60px;
     }
+  }
+}
+
+.icon-card{
+  position: relative;
+  background-color: #f2f2f2;
+  max-width: 510px;
+  margin: 40px auto 0px;
+  border-radius: 20px;
+  padding: 195px 25px 25px;
+  text-align: center;
+
+  h3{
+    font-style: italic;
+    margin-bottom: 25px;
+  }
+
+  p{
+    text-align: left;
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(images/sprites.png);
+    background-repeat: no-repeat;
+  }
+
+  &#proven-card::before{
+    background-position: 0px -580px;
+    height: 119px;
+    width: 125px;
+  }
+  &#lightweight-card::before{
+    background-position: -140px -580px;
+    height: 99px;
+    width: 112px;
   }
 }
