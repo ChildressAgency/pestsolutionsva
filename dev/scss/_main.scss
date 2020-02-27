@@ -205,7 +205,7 @@ article{
   }
 
   .card-body{
-    background-color: #f2f2f2;
+    background-color: $color-light-gray;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 
@@ -300,7 +300,7 @@ article{
   #gallery-thumbs{
     position: relative;
     min-height: 310px;
-    background-color: #f2f2f2;
+    background-color: $color-light-gray;
     border-radius: 20px;
     padding: 15px 25px 60px;
   }
@@ -344,7 +344,7 @@ article{
 
 .icon-card{
   position: relative;
-  background-color: #f2f2f2;
+  background-color: $color-light-gray;
   max-width: 510px;
   margin: 40px auto 0px;
   border-radius: 20px;
@@ -532,7 +532,7 @@ article{
   }
 
   .accordion-panel{
-    background-color: #f2f2f2;
+    background-color: $color-light-gray;
 
     h3{
       color: #fff;
@@ -547,5 +547,36 @@ article{
     .accordion-panel-body{
       padding: 15px;
     }
+  }
+}
+
+#did-you-know{
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2{
+    font-size: 125px;
+    color: #fff;
+    text-shadow: 5px 5px 10px #666;
+    font-weight: $font-weight-black;
+  }
+
+  .carousel-indicators{
+    li{
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background-color: $color-light-gray;
+
+      &.active{
+        background-color: $color-main;
+      }
+    }
+  }
+
+  .carousel-caption p{
+    font-size: 40px;
+    font-weight: $font-weight-bold;
+    text-shadow: 5px 5px 10px #666;
   }
 }
