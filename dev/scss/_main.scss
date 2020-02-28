@@ -126,20 +126,18 @@ article{
   color: $color-main;
 }
 
-#services-tabs{
-  .nav-item + .nav-item{
-    margin-left: 25px;
+.services-tabs{
+  .nav-item{
+    margin: 25px;
   }
 
   .nav-link{
     background-color: $color-main;
     display: inline-block;
-    height: 190px;
-    width: 190px;
     position: relative;
     border-radius: 20px;
 
-    &::after{
+    &::before{
       content: "";
       background-image: url(images/sprites.png);
       background-repeat: no-repeat;
@@ -149,36 +147,117 @@ article{
       transform: translate(-50%, -50%);
     }
 
-    &#termite-service-tab::after{
-      background-position: 0px -330px;
-      height: 140px;
-      width: 79px;
-    }
-    &#mosquito-service-tab::after{
-      background-position: -240px -330px;
-      height: 137px;
-      width: 133px;
-    }
-
     &:hover,
     &.active{
       background-color: $color-alt;
     }
   }
 }
+#services-tabs{
+  .nav-link{
+    height: 190px;
+    width: 190px;
 
-#services-content{
+    &#termite-service-tab::before{
+      background-position: 0px -330px;
+      height: 140px;
+      width: 79px;
+    }
+    &#mosquito-service-tab::before{
+      background-position: -240px -330px;
+      height: 137px;
+      width: 133px;
+    }
+  }
+}
+#species-tabs{
+  .nav-link{
+    height: 115px;
+    width:115px;
+
+    &::after{
+      content: attr(title);
+      position: absolute;
+      bottom: -26px;
+      color: $color-main;
+      text-transform: uppercase;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &#ants-tab::before{
+      background-position: 0px -890px;
+      height: 87px;
+      width: 65px;
+    }
+    &#bees-wasps-tab::before{
+      background-position: -220px -890px;
+      height: 97px;
+      width: 83px;
+    }
+    &#termites-tab::before{
+      background-position: -470px -890px;
+      height: 88px;
+      width: 49px;
+    }
+    &#mice-rodents-tab:before{
+      background-position: 0px -1070px;
+      height: 73px;
+      width: 83px;
+    }
+    &#mosquitoes-tab::before{
+      background-position: -260px -1070px;
+      height: 76px;
+      width: 74px;
+    }
+
+    &:hover::after,
+    &.active::after{
+      color: $color-alt;
+      font-weight: $font-weight-black;
+    }
+  }
+}
+#special-tabs{
+  .nav-link{
+    height: 171px;
+    width: 171px;
+
+    &#raccoons-tab::before{
+      background-position: 0px -1220px;
+      height: 84px;
+      width: 105px;
+    }
+    &#bees-tab::before{
+      background-position: -284px -1220px;
+      height: 146px;
+      width: 124px;
+    }
+    &#birds-tab::before{
+      background-position: 0px -1430px;
+      height: 112px;
+      width: 165px;
+    }
+    &#fleas-tab::before{
+      background-position: -340px -1430px;
+      height: 117px;
+      width: 133px;
+    }
+  }
+}
+
+.services-content{
   .card{
     border: none;
     flex-direction: row;
     border-radius: 20px;
     box-shadow: 5px 5px 10px #999;
+    min-height: 300px;
   }
 
   .card-img{
     background-color: $color-main;
     position: relative;
-    width: 200px;
     height: auto;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -191,16 +270,6 @@ article{
       transform: translate(-50%, -50%);
       background-image: url(images/sprites.png);
       background-repeat: no-repeat;
-    }
-    &#termite-service-img::after{
-      background-position: -90px -328px;
-      height: 238px;
-      width: 133px;
-    }
-    &#mosquito-service-img::after{
-      background-position: -390px -330px;
-      height: 195px;
-      width: 190px;
     }
   }
 
@@ -234,76 +303,19 @@ article{
     }
   }
 }
+#services-content{
+  .card-img{
+    width: 200px;
 
-
-#species-tabs{
-  .nav-item{
-    margin: 25px;
-  }
-
-  .nav-link{
-    background-color: $color-main;
-    display: inline-block;
-    height: 115px;
-    width:115px;
-    position: relative;
-    border-radius: 20px;
-
-    &::after{
-      content: attr(title);
-      position: absolute;
-      bottom: -26px;
-      color: $color-main;
-      text-transform: uppercase;
-      left: 50%;
-      transform: translateX(-50%);
+    &#termite-service-img::after{
+      background-position: -90px -328px;
+      height: 238px;
+      width: 133px;
     }
-
-    &::before{
-      content: "";
-      background-image: url(images/sprites.png);
-      background-repeat: no-repeat;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    &#ants-tab::before{
-      background-position: 0px -890px;
-      height: 87px;
-      width: 65px;
-    }
-    &#bees-wasps-tab::before{
-      background-position: -220px -890px;
-      height: 97px;
-      width: 83px;
-    }
-    &#termites-tab::before{
-      background-position: -470px -890px;
-      height: 88px;
-      width: 49px;
-    }
-    &#mice-rodents-tab:before{
-      background-position: 0px -1070px;
-      height: 73px;
-      width: 83px;
-    }
-    &#mosquitoes-tab::before{
-      background-position: -260px -1070px;
-      height: 76px;
-      width: 74px;
-    }
-
-    &:hover,
-    &.active{
-      background-color: $color-alt;
-    }
-
-    &:hover::after,
-    &.active::after{
-      color: $color-alt;
-      font-weight: $font-weight-black;
+    &#mosquito-service-img::after{
+      background-position: -390px -330px;
+      height: 195px;
+      width: 190px;
     }
   }
 }
@@ -312,30 +324,9 @@ article{
   max-width: 890px;
   margin: 60px auto 0px;
 
-  .card{
-    border: none;
-    flex-direction: row;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px #999;
-  }
-
   .card-img{
-    background-color: $color-main;
-    position: relative;
     width: 170px;
-    height: auto;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
 
-    &::after{
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-image: url(images/sprites.png);
-      background-repeat: no-repeat;
-    }
     &#ant-img::after{
       background-position: -80px -891px;
       height: 165px;
@@ -362,15 +353,34 @@ article{
       width: 139px;
     }
   }
+}
 
-  .card-body{
-    background-color: $color-light-gray;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+#special-content{
+  max-width: 705px;
+  margin: 60px auto 0px;
 
-    h3{
-      font-size: 40px;
-      font-weight: $font-weight-black;
+  .card-img{
+    width: 222px;
+
+    &#raccoons-img::after{
+      background-position: -113px -1220px;
+      height: 129px;
+      width: 162px;
+    }
+    &#bees-img::after{
+      background-position: -430px -1220px;
+      height: 198px;
+      width: 168px;
+    }
+    &#birds-img::after{
+      background-position: -170px -1430px;
+      height: 112px;
+      width: 165px;
+    }
+    &#fleas-img::after{
+      background-position: 0px -1560px;
+      height: 141px;
+      width: 161px;
     }
   }
 }
