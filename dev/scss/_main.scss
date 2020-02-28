@@ -719,3 +719,97 @@ article{
     text-shadow: 5px 5px 10px #666;
   }
 }
+
+#pricing{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.price-card{
+  width: 330px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px #444;
+
+  .price-card-title{
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+
+    h3{
+      font-size: 37px;
+      font-weight: $font-weight-black;
+      color: #fff;
+      text-transform: unset;
+    }
+    p{
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+
+  .price-card-price{
+    padding: 15px;
+    background-color: $color-light-gray;
+    text-align: center;
+
+    h4{
+      font-size: 100px;
+      font-weight: $font-weight-bold;
+
+      small{
+        font-size: 16px;
+      }
+    }
+  }
+
+  &#price-card-pro{
+    .price-card-title{
+      background-color: $color-main;
+    }
+
+    .price-card-price h4{
+      color: $color-main;
+
+      small{
+        color: #4d4d4d;
+      }
+    }
+  }
+  &#price-card-plus{
+    .price-card-title{
+      background-color: $color-alt;
+    }
+
+    .price-card-price h4{
+      color: $color-alt;
+
+      small{
+        color: #4d4d4d;
+      }
+    }
+  }
+  &#price-card-premier{
+    .price-card-title{
+      background-color: #6d2b3d;
+    }
+
+    .price-card-price h4{
+      color: #6d2b3d;
+
+      small{
+        color: #4d4d4d;
+      }
+    }
+  }
+
+  .price-card-content{
+    padding: 15px;
+
+    ul{
+      padding-left: 15px;
+    }
+  }
+}
