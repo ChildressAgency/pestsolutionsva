@@ -86,13 +86,88 @@ function pestsolutions_setup(){
   //set_post_thumbnail_size(320, 320);
 
   register_nav_menus(array(
-    'header-nav' => 'Header Navigation',
+    'left-header-nav' => 'Left Header Navigation',
+    'right-header-nav' => 'Right Header Navigation',
     'footer-nav' => 'Footer Navigation',
-    'company-menu' => 'Company Footer Menu',
-    'services-menu' => 'Services Footer Menu'
   ));
 
   load_theme_textdomain('pestsolutions', get_stylesheet_directory_uri() . '/languages');
 }
 
 require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
+
+function pestsolutions_left_header_fallback_menu(){ ?>
+  <?php
+    $services_page = get_page_by_path('services');
+    $services_page_id = $services_page->ID;
+  ?>
+
+  <ul id="left-header-nav" class="navbar-nav align-items-center">
+    <li class="nav-item<?php if(is_front_page()){ echo ' active'; } ?>">
+      <a href="<?php echo esc_url(home_url()); ?>" class="nav-link"><?php echo esc_html__('Home', 'pestsolutions'); ?></a>
+    </li>
+    <li class="nav-item<?php if(is_page('pest-management')){ echo ' active'; } ?>">
+      <a href="<?php echo esc_url(home_url('pest-management')); ?>" class="nav-link"><?php echo esc_html__('Pest Management', 'pestsolutions'); ?></a>
+    </li>
+    <li class="nav-item dropdown<?php if(is_page('services') || $post->post_parent == $services_page_id){ echo ' active'; } ?>">
+      <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html__('Services', 'pestsolutions'); ?></a>
+      <ul class="dropdown-menu">
+        <li class="nav-item<?php if(is_page('termites')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('termites')); ?>" class="dropdown-item"><?php echo esc_html__('Termites', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_page('mosquitoes')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('mosquitoes')); ?>" class="dropdown-item"><?php echo esc_html__('Mosquitoes', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_page('special-services')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('special-services')); ?>" class="dropdown-item"><?php echo esc_html__('Special Services', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_page('ipm-services')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('ipm-services')); ?>" class="dropdown-item"><?php echo esc_html__('IPM Services', 'pestsolutions'); ?></a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+<?php }
+
+function pestsolutions_right_header_fallback_menu(){ ?>
+  <ul id="right-header-nav" class="navbar-nav align-items-center">
+    <li class="nav-item<?php if(is_page('do-it-yourself')){ echo ' active'; } ?>">
+      <a href="<?php echo esc_url(home_url('do-it-yourself')); ?>" class="nav-link"><?php echo esc_html__('Do-It-Yourself', 'pestsolutions'); ?></a>
+    </li>
+    <li class="nav-item dropdown<?php if(is_singular('pest')){ echo ' active'; } ?>">
+      <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html__('Pests', 'pestsolutions'); ?></a>
+      <ul class="dropdown-menu">
+        <li class="nav-item<?php if(is_single('ants')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('ants')); ?>" class="dropdown-item"><?php echo esc_html__('ants', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_single('mosquitoes')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('mosquitoes')); ?>" class="dropdown-item"><?php echo esc_html__('mosquitoes', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_single('roaches')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('roaches')); ?>" class="dropdown-item"><?php echo esc_html__('roaches', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_single('rodents')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('rodents')); ?>" class="dropdown-item"><?php echo esc_html__('rodents', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_single('spiders')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('spiders')); ?>" class="dropdown-item"><?php echo esc_html__('spiders', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_single('stingers')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('stingers')); ?>" class="dropdown-item"><?php echo esc_html__('stingers', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_single('termites')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('termites')); ?>" class="dropdown-item"><?php echo esc_html__('termites', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_single('ticks')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('ticks')); ?>" class="dropdown-item"><?php echo esc_html__('ticks', 'pestsolutions'); ?></a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item<?php if(is_page('areas-served')){ echo ' active'; } ?>">
+      <a href="<?php echo esc_url(home_url('areas-served')); ?>" class="nav-link"><?php echo esc_html__('Areas served', 'pestsolutions'); ?></a>
+    </li>
+    <li class="nav-item<?php if(is_page('contact-us')){ echo ' active'; } ?>">
+      <a href="<?php echo esc_url(home_url('contact-us')); ?>" class="nav-link"><?php echo esc_html__('Contact Us', 'pestsolutions'); ?></a>
+    </li>
+  </ul>
+<?php }
