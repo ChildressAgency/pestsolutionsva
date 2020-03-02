@@ -68,7 +68,7 @@ add_action('wp_enqueue_scripts', 'pestsolutions_styles');
 function pestsolutions_styles(){
   wp_register_style(
     'google-fonts',
-    'https://fonts.googleapis.com/css?family=Maitree:400,700|Nunito+Sans:400,600,700|Nunito:700'
+    'https://fonts.googleapis.com/css?family=Lato:400,700,900,900i&display=swap'
   );
 
   wp_register_style(
