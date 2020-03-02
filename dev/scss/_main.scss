@@ -126,6 +126,33 @@ article{
   color: $color-main;
 }
 
+.alignnone{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px;
+}
+.aligncenter{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px auto;
+}
+.alignright{
+  display: block;
+  max-width:100%;
+  height: auto;
+  margin: 25px 0px 25px 25px;
+  float: right;
+}
+.alignleft{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 25px 25px 25px 0px;
+  float: left;
+}
+
 .services-tabs{
   .nav-item{
     margin: 25px;
