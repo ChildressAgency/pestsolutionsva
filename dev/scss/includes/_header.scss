@@ -106,7 +106,11 @@
   .nav-item.active .nav-link{
     color: $color-alt;
   }
-}  
+} 
+
+.navbar-brand img{
+  max-width: 145px;
+}
 
 .navbar-toggler{
   border-color: $color-main;
