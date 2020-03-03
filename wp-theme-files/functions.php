@@ -184,3 +184,33 @@ function pestsolutions_footer_services_fallback_menu(){ ?>
     <li><a href="<?php echo esc_url(home_url('crawlspace-encapsulation'));?>"><?php echo esc_html__('Crawlspace Encapsulation', 'pestsolutions'); ?></a></li>
   </ul>
 <?php }
+
+add_filter('block_categories', 'pestsolutions_custom_block_category', 10, 2);
+function pestsolutions_custom_block_category($categories, $post){
+  return array_merge(
+    $categories,
+    array(
+      array(
+        'slug' => 'custom-blocks',
+        'title' => esc_html__('Custom Blocks', 'pestsolutions'),
+        'icon' => 'wordpress'
+      )
+    )
+  );
+}
+
+add_action('acf/init', 'pestsolutions_register_blocks');
+function pestsolutions_register_blocks(){
+  if(function_exists('acf_register_block_type')){
+    acf_register_block_type(array(
+      'name' => 'prestyled_button',
+      'title' => esc_html__('Pre-Styled Button', 'pestsolutions'),
+      'description' => esc_html__('Add a pre-styled button', 'pestsolutions'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/blocks/prestyled_button.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/prestyled_button.css'
+    ));
+  }
+}
