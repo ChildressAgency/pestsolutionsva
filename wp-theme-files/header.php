@@ -160,7 +160,8 @@
       </div>
     </div>
   </section>
-<?php else: ?>
+<?php else: 
+  if(!is_page('contact') && !is_page('pest-management')): ?>
   <?php
     $hero_image = get_field('hero_image');
     if($hero_image){
@@ -201,4 +202,4 @@
       </div>
     </div>
   <?php endif; ?>
-<?php endif; ?>
+<?php endif; endif; ?>
