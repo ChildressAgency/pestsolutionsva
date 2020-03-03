@@ -88,7 +88,7 @@ function pestsolutions_setup(){
   register_nav_menus(array(
     'left-header-nav' => 'Left Header Navigation',
     'right-header-nav' => 'Right Header Navigation',
-    'footer-nav' => 'Footer Navigation',
+    'footer-services-nav' => 'Footer Services Navigation',
   ));
 
   load_theme_textdomain('pestsolutions', get_stylesheet_directory_uri() . '/languages');
@@ -169,5 +169,18 @@ function pestsolutions_right_header_fallback_menu(){ ?>
     <li class="nav-item<?php if(is_page('contact-us')){ echo ' active'; } ?>">
       <a href="<?php echo esc_url(home_url('contact-us')); ?>" class="nav-link"><?php echo esc_html__('Contact Us', 'pestsolutions'); ?></a>
     </li>
+  </ul>
+<?php }
+
+function pestsolutions_footer_services_fallback_menu(){ ?>
+  <ul class="footer-services">
+    <li><a href="<?php echo esc_url(home_url('services')); ?>"><?php echo esc_html__('Services', 'pestsolutions'); ?></a></li>
+    <li><a href="<?php echo esc_url(home_url('pest-management')); ?>"><?php echo esc_html__('Pest Management', 'pestsolutions'); ?></a></li>
+    <li><a href="<?php echo esc_url(home_url('special-services')); ?>"><?php echo esc_html__('Special Services', 'pestsolutions'); ?></a></li>
+    <li><a href="<?php echo esc_url(home_url('ipm-services')); ?>"><?php echo esc_html__('IPM Services', 'pestsolutions'); ?></a></li>
+    <li><a href="<?php echo esc_url(home_url('termites')); ?>"><?php echo esc_html__('Termites', 'pestsolutions'); ?></a></li>
+    <li><a href="<?php echo esc_url(home_url('mosquitoes')); ?>"><?php echo esc_html__('Mosquitoes', 'pestsolutions'); ?></a></li>
+    <li><a href="<?php echo esc_url(home_url('leaf-defier')); ?>"><?php echo esc_html__('Leaf Defier', 'pestsolutions'); ?></a></li>
+    <li><a href="<?php echo esc_url(home_url('crawlspace-encapsulation'));?>"><?php echo esc_html__('Crawlspace Encapsulation', 'pestsolutions'); ?></a></li>
   </ul>
 <?php }

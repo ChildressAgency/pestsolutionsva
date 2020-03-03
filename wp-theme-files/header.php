@@ -37,13 +37,13 @@
             ?>
             <div class="social mr-3">
               <?php if($facebook): ?>
-                <a href="<?php echo esc_url($facebook); ?>" id="facebook" aria-label="Facebook">
+                <a href="<?php echo esc_url($facebook); ?>" id="facebook" aria-label="Facebook" target="_blank">
                   <svg class="social-icon">
                     <use xlink:href="#icon-facebook" />
                   </svg>
                 </a>
               <?php endif; if($twitter): ?>
-                <a href="<?php echo esc_url($twitter); ?>" id="twitter" aria-label="Twitter">
+                <a href="<?php echo esc_url($twitter); ?>" id="twitter" aria-label="Twitter" target="_blank">
                   <svg class="social-icon">
                     <use xlink:href="#icon-twitter" />
                   </svg>
@@ -120,62 +120,85 @@
     </nav>
   </header>
 
+  <?php 
+    $default_hero_image = get_field('default_hero_image', 'option'); 
+    $default_hero_image_css = get_field('default_hero_image_css', 'option');
+  ?>
+
 <?php if(is_front_page()): ?>
-  <section id="hero" class="hero" data-hero_images='["C:/Users/JohnCampbell/OneDrive - Childress Agency/ChildressAgency/pestsolutionsva/wp-theme-files/images/hero-squirrel.jpg", "C:/Users/JohnCampbell/OneDrive - Childress Agency/ChildressAgency/pestsolutionsva/wp-theme-files/images/hero-superkid.jpg", "C:/Users/JohnCampbell/OneDrive - Childress Agency/ChildressAgency/pestsolutionsva/wp-theme-files/images/hero-ants.jpg"]' style="background-image:url(../wp-theme-files/images/hero-squirrel.jpg);">
+  <?php 
+    $hp_hero_images_urls = array();
+    $hp_hero_images = '';
+    $hp_hero_first_image = '';
+
+    if(have_rows('hero_images')){
+      while(have_rows('hero_images')){
+        the_row();
+        $hp_hero_image = get_sub_field('hero_image');
+        $hp_hero_images_urls[] = esc_url($hp_hero_image['url']);
+      }
+
+      $hp_hero_images = json_encode($hp_hero_images_urls);
+      $hp_hero_first_image = $hp_hero_images_urls[0];
+    }
+    else{
+      $hp_hero_first_image = $default_hero_image['url'];
+    }
+  ?>
+
+  <section id="hero" class="hero" data-hero_images='<?php echo $hp_hero_images; ?>' style="background-image:url(<?php echo esc_url($hp_hero_first_image); ?>);">
     <div class="container">
       <div class="hero-caption">
         <div class="row">
           <div class="col-md-7 col-lg-8 d-flex align-items-center justify-content-end">
-            <h1 class="hero-title" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1000">Safe and Effective<span>Pest Control</span></h1>
+            <h1 class="hero-title" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1000"><?php echo the_field('hero_caption'); ?></h1>
           </div>
           <div class="col-md-5 col-lg-4">
-            <div class="hero-contact-form" data-aos="fade-left" data-aos-easing="ease-out" data-aos-duration="1000" data-aos-delay="50">
-              <header>
-                <h3>Contact Us Now</h3>
-                <p>Let's get your house pest free today.</p>
-              </header>
-              <div class="form-group">
-                <label for="hero-your-name" class="sr-only">Name*</label>
-                <input type="text" id="hero-your-name" class="form-control" placeholder="NAME*" />
-              </div>
-              <div class="form-group">
-                <label for="hero-your-email" class="sr-only">Email*</label>
-                <input type="email" id="hero-your-email" class="form-control" placeholder="EMAIL*" />
-              </div>
-              <div class="form-group">
-                <label for="hero-phone" class="sr-only">Phone*</label>
-                <input type="text" id="hero-phone" class="form-control" placeholder="PHONE*" />
-              </div>
-              <div class="form-group">
-                <label for="hero-comment" class="sr-only">Comment</label>
-                <textarea id="hero-comment" class="form-control" placeholder="COMMENT"></textarea>
-              </div>
-              <div class="form-group text-right">
-                <input type="submit" class="btn-main" value="SEND" />
-              </div>
-            </div>
+            <?php echo do_shortcode(get_field('hero_contact_form_shortcode')); ?>
           </div>
         </div>
       </div>
     </div>
   </section>
 <?php else: ?>
-  <section id="hero" class="hero d-flex align-items-end" style="background-image:url(../wp-theme-files/images/ants-on-plate.jpg); background-position:center center;">
+  <?php
+    $hero_image = get_field('hero_image');
+    if($hero_image){
+      $hero_image_url = $hero_image['url'];
+      $hero_image_css = get_field('hero_image_css');
+    }
+    else{
+      $hero_image_url = $default_hero_image['url'];
+      $hero_image_css = $default_hero_image_css;
+    }
+  ?>
+  <section id="hero" class="hero d-flex align-items-end" style="background-image:url(<?php echo esc_url($hero_image_url); ?>); <?php echo esc_attr($hero_image_css); ?>">
     <div class="container">
-      <div class="hero-caption">
-        <p class="hero-title" data-aos="fade-left">Solutions to your ant problem</p>
-      </div>
+      <?php 
+        $hero_caption = get_field('hero_caption');
+        if($hero_caption): ?>
+          <div class="hero-caption">
+            <p class="hero-title" data-aos="fade-left"><?php echo esc_html($hero_caption); ?></p>
+          </div>
+      <?php endif; ?>
     </div>
   </section>
-  <div class="free-inspection-banner">
-    <div class="container-fluid">
-      <h2>Get a Free Inspection</h2>
-      <p>Call your nearest location today</p>
-      <ul class="free-inspection-locations">
-        <li><a href="tel:540.288.8585">Stafford / Fredericksburg 540.288.8585</a></li>
-        <li><a href="tel:804.448.1170">Caroline 804.448.1170</a></li>
-        <li><a href="tel:804.550.9005">N. Richmond 804.550.9005</a></li>
-      </ul>
+
+  <?php if(get_field('display_banner', 'option')): ?>
+    <div class="free-inspection-banner">
+      <div class="container-fluid">
+        <h2><?php the_field('banner_title', 'option'); ?></h2>
+        <p><?php the_field('banner_subtitle', 'option'); ?></p>
+
+        <?php if(have_rows('locations', 'option')): ?>
+          <ul class="free-inspection-locations">
+            <?php while(have_rows('locations', 'option')): the_row(); ?>
+              <?php $location_number = get_sub_field('location_phone_number'); ?>
+              <li><a href="tel:<?php echo esc_attr($location_number); ?>"><?php the_sub_field('location_title'); ?>&nbsp;<?php echo $location_number; ?></a></li>
+            <?php endwhile; ?>
+          </ul>
+        <?php endif; ?>
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 <?php endif; ?>
