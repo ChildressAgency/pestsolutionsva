@@ -9,12 +9,15 @@ body{
 }
 
 a{
-  color: $color-alt;
+  /*color: $color-alt;*/
+  color: $color-main;
+  font-weight: $font-weight-bold;
   transition: all .3s ease;
 
   &:hover,
   &:focus{
     color: $color-alt;
+    text-decoration: none;
   }
 }
 
@@ -124,6 +127,12 @@ article{
   margin-bottom: 40px;
   text-transform: uppercase;
   color: $color-main;
+}
+
+@include media-breakpoint-down(sm){
+  .page-title{
+    font-size: 50px;
+  }
 }
 
 .alignnone{

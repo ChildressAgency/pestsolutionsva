@@ -46,6 +46,16 @@
     h3{
       color: #fff;
     }
+
+    a{
+      color: $color-alt;
+
+      &:hover,
+      &:focus{
+        color: $color-alt;
+        text-decoration: underline;
+      }
+    }
   }
 }
 

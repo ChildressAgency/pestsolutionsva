@@ -58,6 +58,16 @@ jQuery(document).ready(function($){
   });
 
   $('#did-you-know-carousel .carousel-inner .carousel-item').carouselHeights();
+
+  $('#termite-modal').on('show.bs.modal', function(e){
+    var button = $(e.relatedTarget);
+    var termiteModalTitle = button.data('termite_modal_title');
+    var termiteModalContent = button.data('termite_modal_content');
+
+    var modal = $(this);
+    modal.find('#termite-modal-title').text(termiteModalTitle);
+    modal.find('#termite-modal-content').html(termiteModalContent);
+  });
 }); //end jquery
 
 /**
