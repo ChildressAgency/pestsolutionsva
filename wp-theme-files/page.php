@@ -3,8 +3,7 @@
   <div class="container">
     <section class="main-content">
       <article>
-        <?php $page_title = get_field('page_title'); ?>
-        <h1 class="page-title"><?php echo $page_title ? esc_html($page_title) : get_the_title(); ?></h1>
+        <?php get_template_part('partials/page_title'); ?>
         <?php 
           if(have_posts()){
             while(have_posts()){

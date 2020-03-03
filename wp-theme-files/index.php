@@ -11,7 +11,7 @@
             the_post();
             
             if(is_singular()){
-              echo '<h1 class="page-title">' . esc_html(get_the_title()) . '</h1>';
+              get_template_part('partials/page_title');
               the_content();
             }
             else{
