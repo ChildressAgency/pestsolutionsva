@@ -124,6 +124,15 @@ function pestsolutions_left_header_fallback_menu(){ ?>
         <li class="nav-item<?php if(is_page('ipm-services')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('ipm-services')); ?>" class="dropdown-item"><?php echo esc_html__('IPM Services', 'pestsolutions'); ?></a>
         </li>
+        <li class="nav-item">
+          <div class="dropdown-divider"></div>
+        </li>
+        <li class="nav-item<?php if(is_page('leaf-defier')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('leaf-defier')); ?>" class="dropdown-item"><?php echo esc_html__('Leaf Defier', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_page('crawlspace-encapsulation')){ echo ' active'; }; ?>">
+          <a href="<?php echo esc_url(home_url('crawlspace-encapsulation')); ?>" class="dropdown-item"><?php echo esc_html__('Crawlspace Encapsulation', 'pestsolutions'); ?></a>
+        </li>
       </ul>
     </li>
   </ul>
