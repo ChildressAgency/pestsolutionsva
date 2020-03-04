@@ -45,4 +45,12 @@ function pestsolutions_acf_options_page(){
     'capability' => 'edit_posts',
     'redirect' => false
   ));
+
+  acf_add_options_page(array(
+    'page_title' => esc_html__('Testimonials', 'pestsolutions'),
+    'menu_title' => esc_html__('Testimonials', 'pestsolutions'),
+    'menu_slug' => 'testimonials',
+    'capability' => 'edit_posts',
+    'redirect' => false
+  ));
 }
