@@ -4,21 +4,15 @@
     <article>
       <?php get_template_part('partials/page_title'); ?>
 
-      <div class="row">
-        <div class="col-sm-8 col-lg-9">
-          <?php the_field('service_description'); ?>
-        </div>
-        <?php
-          $brochure_placeholder_img = get_field('brochure_placeholder_img');
-          $brochure_link = get_field('brochure_link');
-          if($brochure_placeholder_img || $brochure_link): ?>
-            <div class="col-sm-4 col-lg-3">
-              <?php if($brochure_placeholder_img): ?>
-                <a href="<?php echo esc_url($brochure_link['url']); ?>"><img src="<?php echo esc_url($brochure_placeholder_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($brochure_placeholder_img['alt']); ?>" /></a>
-              <p><a href="<?php echo esc_url($brochure_link['url']); ?>">Download</a> the brochure for more information.</p>
-            </div>
-        <?php endif; ?>
-      </div>
+      <?php
+        if(have_posts()){
+          while(have_posts()){
+            the_post();
+
+            the_content(); 
+          }
+        }
+      ?>
     </article>
 
     <section id="the-process">
