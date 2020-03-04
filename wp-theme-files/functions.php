@@ -221,5 +221,16 @@ function pestsolutions_register_blocks(){
       'render_template' => get_stylesheet_directory() . '/partials/blocks/prestyled_button.php',
       'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/prestyled_button.css'
     ));
+
+    acf_register_block_type(array(
+      'name' => 'accordion',
+      'title' => esc_html__('Accordion', 'pestsolutions'),
+      'description' => esc_html__('Add an accordion section', 'pestsolutions'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/blocks/accordion.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/accordion.css'
+    ));
   }
 }
