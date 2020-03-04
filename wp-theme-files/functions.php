@@ -85,6 +85,12 @@ function pestsolutions_setup(){
   add_theme_support('post-thumbnails');
   //set_post_thumbnail_size(320, 320);
 
+  add_theme_support('editor-styles');
+  add_editor_style('style-editor.css');
+
+  add_theme_support('wp-block-styles');
+  add_theme_support('responsive-embeds');
+  
   register_nav_menus(array(
     'left-header-nav' => 'Left Header Navigation',
     'right-header-nav' => 'Right Header Navigation',
@@ -143,31 +149,31 @@ function pestsolutions_right_header_fallback_menu(){ ?>
     <li class="nav-item<?php if(is_page('do-it-yourself')){ echo ' active'; } ?>">
       <a href="<?php echo esc_url(home_url('do-it-yourself')); ?>" class="nav-link"><?php echo esc_html__('Do-It-Yourself', 'pestsolutions'); ?></a>
     </li>
-    <li class="nav-item dropdown<?php if(is_singular('pest')){ echo ' active'; } ?>">
+    <li class="nav-item dropdown<?php if(is_page_template('template/template-pests.php')){ echo ' active'; } ?>">
       <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html__('Pests', 'pestsolutions'); ?></a>
       <ul class="dropdown-menu">
-        <li class="nav-item<?php if(is_single('ants')){ echo ' active'; } ?>">
+        <li class="nav-item<?php if(is_page('ants')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('ants')); ?>" class="dropdown-item"><?php echo esc_html__('ants', 'pestsolutions'); ?></a>
         </li>
-        <li class="nav-item<?php if(is_single('mosquitoes')){ echo ' active'; } ?>">
+        <li class="nav-item<?php if(is_page('mosquitoes')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('mosquitoes')); ?>" class="dropdown-item"><?php echo esc_html__('mosquitoes', 'pestsolutions'); ?></a>
         </li>
-        <li class="nav-item<?php if(is_single('roaches')){ echo ' active'; } ?>">
+        <li class="nav-item<?php if(is_page('roaches')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('roaches')); ?>" class="dropdown-item"><?php echo esc_html__('roaches', 'pestsolutions'); ?></a>
         </li>
-        <li class="nav-item<?php if(is_single('rodents')){ echo ' active'; } ?>">
+        <li class="nav-item<?php if(is_page('rodents')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('rodents')); ?>" class="dropdown-item"><?php echo esc_html__('rodents', 'pestsolutions'); ?></a>
         </li>
-        <li class="nav-item<?php if(is_single('spiders')){ echo ' active'; } ?>">
+        <li class="nav-item<?php if(is_page('spiders')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('spiders')); ?>" class="dropdown-item"><?php echo esc_html__('spiders', 'pestsolutions'); ?></a>
         </li>
-        <li class="nav-item<?php if(is_single('stingers')){ echo ' active'; } ?>">
+        <li class="nav-item<?php if(is_page('stingers')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('stingers')); ?>" class="dropdown-item"><?php echo esc_html__('stingers', 'pestsolutions'); ?></a>
         </li>
-        <li class="nav-item<?php if(is_single('termites')){ echo ' active'; } ?>">
+        <li class="nav-item<?php if(is_page('termites')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('termites')); ?>" class="dropdown-item"><?php echo esc_html__('termites', 'pestsolutions'); ?></a>
         </li>
-        <li class="nav-item<?php if(is_single('ticks')){ echo ' active'; } ?>">
+        <li class="nav-item<?php if(is_page('ticks')){ echo ' active'; } ?>">
           <a href="<?php echo esc_url(home_url('ticks')); ?>" class="dropdown-item"><?php echo esc_html__('ticks', 'pestsolutions'); ?></a>
         </li>
       </ul>
@@ -185,7 +191,7 @@ function pestsolutions_right_header_fallback_menu(){ ?>
           <a href="<?php echo esc_url(home_url('pest-control-midtown-richmond-va')); ?>" class="dropdown-item"><?php echo esc_html__('Midtown Richmond VA', 'pestsolutions'); ?></a>
         </li>
         <li class="nav-item<?php if(is_page('pest-control-east-end-richmond-va')){ echo ' active'; } ?>">
-          <a href="<?php echo esc_url(home_url('pest-control-east-end-richmond-va')); ?>" class="dropdown-item"><?php echo esc_html__('East End Richmond VA'), 'pestsolutions'); ?></a>
+          <a href="<?php echo esc_url(home_url('pest-control-east-end-richmond-va')); ?>" class="dropdown-item"><?php echo esc_html__('East End Richmond VA', 'pestsolutions'); ?></a>
         </li>
       </ul>
     </li>
