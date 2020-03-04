@@ -232,5 +232,27 @@ function pestsolutions_register_blocks(){
       'render_template' => get_stylesheet_directory() . '/partials/blocks/accordion.php',
       'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/accordion.css'
     ));
+
+    acf_register_block_type(array(
+      'name' => 'callout_section',
+      'title' => esc_html__('Callout Section', 'pestsolutions'),
+      'description' => esc_html__('Callout Section with grey background', 'pestsolutions'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/blocks/callout_section.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/callout_section.css'
+    ));
+
+    acf_register_block_type(array(
+      'name' => 'document_download',
+      'title' => esc_html__('Document download', 'pestsolutions'),
+      'description' => esc_html__('A document download block', 'pestsolutions'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto', 
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/blocks/document_download.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/document_download.css'
+    ));
   }
 }
