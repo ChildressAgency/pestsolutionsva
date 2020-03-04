@@ -254,5 +254,16 @@ function pestsolutions_register_blocks(){
       'render_template' => get_stylesheet_directory() . '/partials/blocks/document_download.php',
       'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/document_download.css'
     ));
+
+    acf_register_block_type(array(
+      'name' => 'image_title_description',
+      'title' => esc_html__('Image with Title and Description', 'pestsolutions'),
+      'description' => esc_html__('Display and image block with a title and description', 'pestsolutions'),
+      'category' => 'custom-blocks',
+      'mode' => 'auto',
+      'algin' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/blocks/image_title_description.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/image_title_description.css'
+    ));
   }
 }
