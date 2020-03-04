@@ -172,8 +172,22 @@ function pestsolutions_right_header_fallback_menu(){ ?>
         </li>
       </ul>
     </li>
-    <li class="nav-item<?php if(is_page('areas-served')){ echo ' active'; } ?>">
-      <a href="<?php echo esc_url(home_url('areas-served')); ?>" class="nav-link"><?php echo esc_html__('Areas served', 'pestsolutions'); ?></a>
+    <li class="nav-item dropdown<?php if(is_page('areas-served')){ echo ' active'; } ?>">
+      <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html__('Areas Served', 'pestsolutions'); ?></a>
+      <ul class="dropdown-menu">
+        <li class="nav-item<?php if(is_page('full-service-pest-control-midlothian-va')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('full-service-pest-control-midlothian-va')); ?>" class="dropdown-item"><?php echo esc_html__('Midlothian VA', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_page('pest-control-company-southside-richmond-va')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('pest-control-company-southside-richmond-va')); ?>" class="dropdown-item"><?php echo esc_html__('Southside Richmond VA', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_page('pest-control-midtown-richmond-va')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('pest-control-midtown-richmond-va')); ?>" class="dropdown-item"><?php echo esc_html__('Midtown Richmond VA', 'pestsolutions'); ?></a>
+        </li>
+        <li class="nav-item<?php if(is_page('pest-control-east-end-richmond-va')){ echo ' active'; } ?>">
+          <a href="<?php echo esc_url(home_url('pest-control-east-end-richmond-va')); ?>" class="dropdown-item"><?php echo esc_html__('East End Richmond VA'), 'pestsolutions'); ?></a>
+        </li>
+      </ul>
     </li>
     <li class="nav-item<?php if(is_page('contact-us')){ echo ' active'; } ?>">
       <a href="<?php echo esc_url(home_url('contact-us')); ?>" class="nav-link"><?php echo esc_html__('Contact Us', 'pestsolutions'); ?></a>
