@@ -22,12 +22,12 @@ if(!class_exists('acf')){
 }
 
 function pestsolutions_acf_settings_path($path){
-  $path = plugin_dir_path(__FILE__) . 'vendors/advanced-custom-fields-pro';
+  $path = plugin_dir_path(__FILE__) . 'vendors/advanced-custom-fields-pro/';
   return $path;
 }
 
 function pestsolutions_acf_settings_dir($dir){
-  $dir = plugin_dir_url(__FILE__) . 'vendors/advanced-custom-fields-pro';
+  $dir = plugin_dir_url(__FILE__) . 'vendors/advanced-custom-fields-pro/';
   return $dir;
 }
 
@@ -36,7 +36,7 @@ function pestsolutions_load_textdomain(){
   load_plugin_textdomain('pestsolutions', false, basename(PESTSOLUTIONS_PLUGIN_DIR) . '/languages');
 }
 
-add_action('acf-init', 'pestsolutions_acf_options_page');
+add_action('acf/init', 'pestsolutions_acf_options_page');
 function pestsolutions_acf_options_page(){
   acf_add_options_page(array(
     'page_title' => esc_html__('General Settings', 'pestsolutions'),
