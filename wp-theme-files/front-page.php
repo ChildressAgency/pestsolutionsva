@@ -100,7 +100,7 @@
               $affiliate_link = get_sub_field('affiliate_link'); 
               $affiliate_img = get_sub_field('affiliate_image');
             ?>
-            <a href="<?php echo esc_url($affiliate_link['url']); ?>"><img src="<?php echo esc_url($affiliate_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($affiliate_img['alt']); ?>" /></a>
+            <a href="<?php echo esc_url($affiliate_link); ?>"><img src="<?php echo esc_url($affiliate_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($affiliate_img['alt']); ?>" /></a>
           <?php endwhile; ?>
         </div>
       </div>

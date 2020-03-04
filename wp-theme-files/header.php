@@ -28,7 +28,7 @@
             <?php 
               $client_login_link = get_field('client_login_link', 'option');
               if($client_login_link): ?>
-                <a href="<?php echo esc_url($client_login_link['url']); ?>" class="btn-main btn-round bug-crawler mr-lg-4">Client Login</a>
+                <a href="<?php echo esc_url($client_login_link); ?>" class="btn-main btn-round bug-crawler mr-lg-4">Client Login</a>
             <?php endif; ?>
 
             <?php
@@ -161,7 +161,7 @@
     </div>
   </section>
 <?php else: 
-  if(!is_page('contact') && !is_page('pest-management')): ?>
+  if(!is_page('contact') && !is_page('services')): ?>
   <?php
     $hero_image = get_field('hero_image');
     if($hero_image){

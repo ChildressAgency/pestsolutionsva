@@ -90,7 +90,7 @@ function pestsolutions_setup(){
 
   add_theme_support('wp-block-styles');
   add_theme_support('responsive-embeds');
-  
+
   register_nav_menus(array(
     'left-header-nav' => 'Left Header Navigation',
     'right-header-nav' => 'Right Header Navigation',
@@ -112,10 +112,10 @@ function pestsolutions_left_header_fallback_menu(){ ?>
     <li class="nav-item<?php if(is_front_page()){ echo ' active'; } ?>">
       <a href="<?php echo esc_url(home_url()); ?>" class="nav-link"><?php echo esc_html__('Home', 'pestsolutions'); ?></a>
     </li>
-    <li class="nav-item<?php if(is_page('pest-management')){ echo ' active'; } ?>">
-      <a href="<?php echo esc_url(home_url('pest-management')); ?>" class="nav-link"><?php echo esc_html__('Pest Management', 'pestsolutions'); ?></a>
+    <li class="nav-item<?php if(is_page('services')){ echo ' active'; } ?>">
+      <a href="<?php echo esc_url(home_url('services')); ?>" class="nav-link"><?php echo esc_html__('Pest Management', 'pestsolutions'); ?></a>
     </li>
-    <li class="nav-item dropdown<?php if(is_page('services') || $post->post_parent == $services_page_id){ echo ' active'; } ?>">
+    <li class="nav-item dropdown<?php if($post->post_parent == $services_page_id){ echo ' active'; } ?>">
       <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html__('Services', 'pestsolutions'); ?></a>
       <ul class="dropdown-menu">
         <li class="nav-item<?php if(is_page('termites')){ echo ' active'; } ?>">
@@ -149,7 +149,7 @@ function pestsolutions_right_header_fallback_menu(){ ?>
     <li class="nav-item<?php if(is_page('do-it-yourself')){ echo ' active'; } ?>">
       <a href="<?php echo esc_url(home_url('do-it-yourself')); ?>" class="nav-link"><?php echo esc_html__('Do-It-Yourself', 'pestsolutions'); ?></a>
     </li>
-    <li class="nav-item dropdown<?php if(is_page_template('template/template-pests.php')){ echo ' active'; } ?>">
+    <li class="nav-item dropdown<?php if(is_page_template('templates/template-pests.php')){ echo ' active'; } ?>">
       <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html__('Pests', 'pestsolutions'); ?></a>
       <ul class="dropdown-menu">
         <li class="nav-item<?php if(is_page('ants')){ echo ' active'; } ?>">
@@ -178,7 +178,7 @@ function pestsolutions_right_header_fallback_menu(){ ?>
         </li>
       </ul>
     </li>
-    <li class="nav-item dropdown<?php if(is_page('areas-served')){ echo ' active'; } ?>">
+    <li class="nav-item dropdown<?php if(is_page_template('templates/template-areas_served.php')){ echo ' active'; } ?>">
       <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html__('Areas Served', 'pestsolutions'); ?></a>
       <ul class="dropdown-menu">
         <li class="nav-item<?php if(is_page('full-service-pest-control-midlothian-va')){ echo ' active'; } ?>">
@@ -203,8 +203,7 @@ function pestsolutions_right_header_fallback_menu(){ ?>
 
 function pestsolutions_footer_services_fallback_menu(){ ?>
   <ul class="footer-services">
-    <li><a href="<?php echo esc_url(home_url('services')); ?>"><?php echo esc_html__('Services', 'pestsolutions'); ?></a></li>
-    <li><a href="<?php echo esc_url(home_url('pest-management')); ?>"><?php echo esc_html__('Pest Management', 'pestsolutions'); ?></a></li>
+    <li><a href="<?php echo esc_url(home_url('services')); ?>"><?php echo esc_html__('Pest Management', 'pestsolutions'); ?></a></li>
     <li><a href="<?php echo esc_url(home_url('special-services')); ?>"><?php echo esc_html__('Special Services', 'pestsolutions'); ?></a></li>
     <li><a href="<?php echo esc_url(home_url('ipm-services')); ?>"><?php echo esc_html__('IPM Services', 'pestsolutions'); ?></a></li>
     <li><a href="<?php echo esc_url(home_url('termites')); ?>"><?php echo esc_html__('Termites', 'pestsolutions'); ?></a></li>
