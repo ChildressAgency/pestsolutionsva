@@ -7,7 +7,7 @@
           </div>
         </div>
       </div>
-      <img src="<?php echo wp_get_stylesheet_directory_uri(); ?>/images/ants-crawling.png" id="crawling-bugs" class="" alt="" />
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ants-crawling.png" id="crawling-bugs" class="" alt="" />
     </section>
 
   <footer id="footer">
