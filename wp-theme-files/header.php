@@ -173,6 +173,7 @@
       $hero_image_css = $default_hero_image_css;
     }
   ?>
+  <?php if(!is_page_template('templates/template-areas_served.php')): ?>
   <section id="hero" class="hero d-flex align-items-end" style="background-image:url(<?php echo esc_url($hero_image_url); ?>); <?php echo esc_attr($hero_image_css); ?>">
     <div class="container">
       <?php 
@@ -184,6 +185,7 @@
       <?php endif; ?>
     </div>
   </section>
+  <?php endif; ?>
 
   <?php if(get_field('display_banner', 'option')): ?>
     <div class="free-inspection-banner">
