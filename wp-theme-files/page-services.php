@@ -23,7 +23,7 @@
                       $package_1_logo_img = get_sub_field('logo_image');
                       $package_1_logo_link = get_sub_field('logo_link');
                       if($package_1_logo_link): ?>
-                        <a href="<?php echo esc_url($package_1_logo_link['url']); ?>">
+                        <a href="<?php echo esc_url($package_1_logo_link); ?>">
                           <img src="<?php echo esc_url($package_1_logo_img['url']); ?>" class="img-fluid d-block ml-auto mb-3" alt="<?php echo esc_attr($package_1_logo_img['alt']); ?>" />
                         </a>
                     <?php else: ?>
@@ -55,7 +55,7 @@
                       $package_2_logo_img = get_sub_field('logo_image');
                       $package_2_logo_link = get_sub_field('logo_link');
                       if($package_2_logo_link): ?>
-                        <a href="<?php echo esc_url($package_2_logo_link['url']); ?>">
+                        <a href="<?php echo esc_url($package_2_logo_link); ?>">
                           <img src="<?php echo esc_url($package_2_logo_img['url']); ?>" class="img-fluid d-block ml-auto mb-3" alt="<?php echo esc_attr($package_2_logo_img['alt']); ?>" />
                         </a>
                     <?php else: ?>
@@ -86,7 +86,7 @@
                       $package_3_logo_img = get_sub_field('logo_image');
                       $package_3_logo_link = get_sub_field('logo_link');
                       if($logo_link): ?>
-                        <a href="<?php echo esc_url($package_3_logo_link['url']); ?>">
+                        <a href="<?php echo esc_url($package_3_logo_link); ?>">
                           <img src="<?php echo esc_url($package_3_logo_img['url']); ?>" class="img-fluid d-block ml-auto mb-3" alt="<?php echo esc_attr($package_3_logo_img['alt']); ?>" />
                         </a>
                     <?php else: ?>
