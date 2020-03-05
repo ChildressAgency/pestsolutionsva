@@ -44,46 +44,70 @@
         </ul>
 
         <div id="species-content" class="tab-content services-content">
-          <div id="ants" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ants-tab">
-            <div class="card">
-              <div id="ant-img" class="card-img"></div>
-              <div class="card-body">
-                <?php the_field('ants_info'); ?>
+          <?php 
+            $ants_info = get_field('ants_info');
+            if($ants_info): ?>
+              <div id="ants" class="tab-pane fade show active" role="tabpanel" aria-labelledby="ants-tab">
+                <div class="card">
+                  <div id="ant-img" class="card-img"></div>
+                  <div class="card-body">
+                    <?php echo apply_filters('the_content', wp_kses_post($ants_info)); ?>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="bees-wasps" class="tab-pane fade" role="tabpanel" aria-labelledby="bees-wasps-tab">
-            <div class="card">
-              <div id="bees-wasps-img" class="card-img"></div>
-              <div class="card-body">
-                <?php the_field('bees_info'); ?>
+          <?php endif; ?>
+
+          <?php 
+            $bees_info = get_field('bees_info');
+            if($bees_info): ?>
+              <div id="bees-wasps" class="tab-pane fade" role="tabpanel" aria-labelledby="bees-wasps-tab">
+                <div class="card">
+                  <div id="bees-wasps-img" class="card-img"></div>
+                  <div class="card-body">
+                    <?php echo apply_filters('the_content', wp_kses_post($bees_info)); ?>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="termites" class="tab-pane fade" role="tabpanel" aria-labelledby="termites-tab">
-            <div class="card">
-              <div id="termites-img" class="card-img"></div>
-              <div class="card-body">
-                <?php the_field('termites_info'); ?>
+          <?php endif; ?>
+
+          <?php
+            $termites_info = get_field('termites_info');
+            if($termites_info): ?>
+              <div id="termites" class="tab-pane fade" role="tabpanel" aria-labelledby="termites-tab">
+                <div class="card">
+                  <div id="termites-img" class="card-img"></div>
+                  <div class="card-body">
+                    <?php echo apply_filters('the_content', wp_kses_post($termites_info)); ?>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="mice-rodents" class="tab-pane fade" role="tabpanel" aria-labelledby="mice-rodents-tab">
-            <div class="card">
-              <div id="mice-rodents-img" class="card-img"></div>
-              <div class="card-body">
-                <?php the_field('mice_rodents_info'); ?>
+          <?php endif; ?>
+
+          <?php
+            $mice_info = get_field('mice_rodents_info');
+            if($mice_info): ?>
+              <div id="mice-rodents" class="tab-pane fade" role="tabpanel" aria-labelledby="mice-rodents-tab">
+                <div class="card">
+                  <div id="mice-rodents-img" class="card-img"></div>
+                  <div class="card-body">
+                    <?php echo apply_filters('the_content', wp_kses_post($mice_info)); ?>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div id="mosquitoes" class="tab-pane fade" role="tabpanel" aria-labelledby="mosquitoes-tab">
-            <div class="card">
-              <div id="mosquitoes-img" class="card-img"></div>
-              <div class="card-body">
-                <?php the_field('mosquitoes_info'); ?>
+          <?php endif; ?>
+
+          <?php
+            $mosquitoes_info = get_field('mosquitoes_info');
+            if($mosquitoes_info): ?>
+              <div id="mosquitoes" class="tab-pane fade" role="tabpanel" aria-labelledby="mosquitoes-tab">
+                <div class="card">
+                  <div id="mosquitoes-img" class="card-img"></div>
+                  <div class="card-body">
+                    <?php echo apply_filters('the_content', wp_kses_post($mosquitoes_info)); ?>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+          <?php endif; ?>
         </div>
       </section>
     <?php endif; ?>
