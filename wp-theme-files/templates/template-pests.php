@@ -8,27 +8,20 @@
 <?php get_header(); ?>
 <main id="main">
   <div class="container">
-    <section class="main-content">
-      <article>
-        <?php get_template_part('partials/page_title'); ?>
-
-        <?php
-          if(have_posts()){
+    <?php get_template_part('partials/page_title'); ?>
+    <?php if(have_posts() && $post->post_content !== ''): ?>
+      <section class="main-content">
+        <article>
+          <?php
             while(have_posts()){
               the_post();
               the_content();
             }
-          }
-        ?>
-      </article>
-    </section>
+          ?>
+        </article>
+      </section>
+    <?php endif; ?>
   </div>
-
-<?php if(have_rows('section_layout')): while(have_rows('section_layout')): the_row(); ?>
-
-  
-
-<?php endwhile; endif; ?>
 
 <?php
   if(have_rows('section_layout')){
@@ -40,7 +33,7 @@
       switch($layout_style){
         case 'gradient_background_with_text': ?>
 
-          <section class="gradient-img-text" style="background-image:url(<?php the_sub_field('background_image_with_gradient'); ?>); background-position:right center;">
+          <section class="gradient-img-text" style="background-image:url(<?php the_sub_field('background_image_with_gradient'); ?>);">
             <div class="container">
               <div class="col-md-6 offset-md-6">
                 <div class="gradient-img-text-content" data-aos="fade-left">
