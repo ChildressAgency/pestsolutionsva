@@ -161,7 +161,7 @@
     </div>
   </section>
 <?php else: 
-  if(!is_page('contact') && !is_page('services')): ?>
+  if(!is_page('contact-us') && !is_page('services')): ?>
   <?php
     $hero_image = get_field('hero_image');
     if($hero_image){

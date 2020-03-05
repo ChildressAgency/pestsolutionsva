@@ -198,7 +198,7 @@
   }
 
   .swiper-pagination{
-    bottom: -45px;
+    bottom: -80px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -223,6 +223,8 @@
     background-color: transparent;
     margin-bottom: -3px;
   }
+
+
 }
 
 #hp-affiliations{
@@ -242,7 +244,9 @@
     margin-right: auto;
 
     a{
-      margin: 5px;
+      margin: 15px;
+      display: flex;
+      align-items: center;
     }
   }
 }

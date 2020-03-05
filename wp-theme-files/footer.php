@@ -58,7 +58,7 @@
 
   <?php if(have_rows('locations', 'option')): ?>
     <div id="callus-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h4 id="modal-label" class="modal-title"><?php echo esc_html__('Select number to call', 'pestsolutions'); ?></h4>
