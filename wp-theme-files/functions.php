@@ -280,9 +280,20 @@ function pestsolutions_register_blocks(){
       'description' => esc_html__('Display and image block with a title and description', 'pestsolutions'),
       'category' => 'custom-blocks',
       'mode' => 'auto',
-      'algin' => 'full',
+      'align' => 'full',
       'render_template' => get_stylesheet_directory() . '/partials/blocks/image_title_description.php',
       'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/image_title_description.css'
+    ));
+
+    acf_register_block_type(array(
+      'name' => 'pest_info_section',
+      'title' => esc_html__('Pest info Section', 'pestsolutions'),
+      'description' => esc_html__('Display a Pest Info Section', 'pestsolutions'),
+      'category' => 'custom-blocks',
+      'mode' => 'edit',
+      'align' => 'full',
+      'render_template' => get_stylesheet_directory() . '/partials/blocks/pest_info_section.php',
+      'enqueue_style' => get_stylesheet_directory_uri() . '/partials/blocks/pest_info_section.css'
     ));
   }
 }
