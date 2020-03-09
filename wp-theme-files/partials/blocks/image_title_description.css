@@ -1,0 +1,18 @@
+.img-title-desc{
+  max-width: 290px;
+  margin: 40px auto 0px;
+}
+
+.img-title-desc h4{
+  color: #fff;
+  background-color: #1e5631;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  padding: 2px 15px;
+}
+
+.img-title-desc p{
+  font-size: 16px;
+}

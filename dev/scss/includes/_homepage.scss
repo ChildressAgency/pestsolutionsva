@@ -1,0 +1,281 @@
+#hp-about-cards{
+  background-color: $color-main;
+  color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .slogan{
+    font-size: 36px;
+    font-weight: $font-weight-bold;
+    color: $color-alt;
+    text-align: center;
+  }
+
+  .about-card{
+    text-align: center;
+    padding-top: 150px;
+    position: relative;
+    margin-top: 40px;
+
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url(images/sprites.png);
+      background-repeat: no-repeat;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &#about-card-1::before{
+      background-position: 0 0;
+      height: 117px;
+      width: 184px;
+    }
+    &#about-card-2::before{
+      background-position: -196px 0px;
+      height: 126px;
+      width: 125px;
+    }
+    &#about-card-3::before{
+      background-position:-334px 0px;
+      height: 127px;
+      width: 109px;
+    }
+
+    h3{
+      color: #fff;
+    }
+
+    a{
+      color: $color-alt;
+
+      &:hover,
+      &:focus{
+        color: $color-alt;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+#years{
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .years-content{
+    background-color: rgba(255, 255, 255, .6);
+    padding: 60px 15px;
+
+    p{
+      font-size: 24px;
+    }
+  }
+}
+
+#pest-management-links{
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  .pest-links{
+    list-style: none;
+    padding-left: 0;
+
+    li{
+      display: inline-block;
+    }
+  }
+
+  .pest-link{
+    display: block;
+    height: 160px;
+    width: 160px;
+    margin: 20px;
+    background-image: url(images/sprites.png);
+    background-repeat: no-repeat;
+
+    &#mosquito-link{
+      background-position: 0px -140px
+    }
+    &#bees-link{
+      background-position: -160px -140px;
+    }
+    &#mice-link{
+      background-position: -330px -140px;
+    }
+    &#ants-link{
+      background-position: -490px -140px;
+    }
+  }
+}
+
+#hp-testimonials{
+  padding-bottom: 100px;
+
+  .container-fluid{
+    position: relative;
+  }
+
+  h2{
+    text-align: center;
+    margin-bottom:40px;
+  }
+
+  .testimonial{
+    width: 325px;
+    height: 260px;
+    border: 2px solid #e6e6e6;
+    padding: 20px;
+
+    h4{
+      font-weight: $font-weight-black;
+    }
+
+    p{
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+
+  .swiper-container{
+    max-width:80%;
+  }
+
+  .swiper-arrow-prev,
+  .swiper-arrow-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 52px;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  .swiper-arrow-prev{
+    left: 15px;
+    right: auto;
+  }
+  .swiper-arrow-next{
+    right: 15px;
+    left: auto;
+  }
+
+  svg.swiper-arrow{
+    height: 30px;
+    width: 20px;
+    fill: $color-main;
+  }
+
+  .star-rating{
+    display: block;
+    background-image: url(images/sprites.png);
+    background-repeat: no-repeat;
+    height: 21px;
+    width: 110px;
+
+    &.stars-1{
+      background-position: -506px 0px;
+    }
+    &.stars-2{
+      background-position: -506px -24px;
+    }
+    &.stars-3{
+      background-position: -506px -48px;
+    }
+    &.stars-4{
+      background-position: -506px -72px;
+    }
+    &.stars-5{
+      background-position: -506px -97px;
+    }
+  }
+
+  .swiper-pagination{
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .swiper-pagination-bullet{
+    height: 24px;
+    width: 24px;
+    opacity: 1;
+    background-color: $color-light-gray;
+
+    & + .swiper-pagination-bullet{
+      margin-left: 15px;
+    }
+  }
+
+  .swiper-pagination-bullet-active{
+    background-image: url(images/sprites.png);
+    background-repeat: no-repeat;
+    background-position: -470px -30px;
+    height: 30px;
+    width: 22px;
+    background-color: transparent;
+    margin-bottom: -3px;
+  }
+
+
+}
+
+#hp-affiliations{
+  padding-bottom:80px;
+
+  h2{
+    text-align: center;
+    margin-bottom:40px;
+  }
+
+  .affiliations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+
+    a{
+      margin: 15px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+#lets-talk{
+  background-image: url(images/bg-marble.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+  padding-bottom: 60px;
+
+  #crawling-bugs{
+    position: absolute;
+    right: auto;
+    left: 40%;
+    bottom: 0;
+    pointer-events: none;
+  }
+}
+
+.contact-form{
+  margin-top: 40px;
+  margin-bottom: 80px;
+
+  h3{
+    text-transform: unset;
+    margin-bottom: 15px;
+  }
+}

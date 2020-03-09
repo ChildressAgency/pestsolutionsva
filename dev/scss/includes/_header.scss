@@ -1,0 +1,178 @@
+#masthead{
+  #callus{
+    font-size: 54px;
+    font-weight: $font-weight-black;
+    line-height: 1.1em;
+    display: inline-block;
+    color: $color-main;
+
+    .cell-phone{
+      width: 35px;
+      height: 60px;
+      vertical-align: top;
+      fill: $color-main;
+      transition: fill .3s ease;
+    }
+
+    &:hover,
+    &:focus{
+      text-decoration: none;
+      color: $color-alt;
+
+      .cell-phone{
+          fill: $color-alt;
+      }
+    }
+  }
+
+  .social{
+    a{
+      .social-icon{
+        height: 30px;
+        width: 30px;
+        fill: $color-main;
+        transition: fill .3s ease;
+      }
+
+      &:hover,
+      &:focus{
+        .social-icon{
+          fill: $color-alt;
+        }
+      }
+    }
+  }
+
+  .search{
+    .search-field{
+      border: none;
+      background-color: $color-light-gray;
+      padding-left: 20px;
+      font-size: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    .btn-search{
+      border: none;
+      background-color: $color-light-gray;
+      padding-right: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .search-icon{
+      height: 20px;
+      width: 20px;
+      fill: $color-dark-gray;
+    }
+  }
+}
+
+#callus-modal{
+  .callus-modal-number{
+    margin-bottom:25px;
+
+    h5{
+      margin-bottom:0;
+    }
+  }
+}
+
+#header-nav{
+  .navbar-brand{
+    margin-top: -25px;
+    margin-left: 20px;
+  }
+
+  .nav-link{
+    text-align: center;
+  }
+
+  .nav-link,
+  .dropdown-item{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $color-main;
+    font-weight: $font-weight-black;
+
+    &:hover,
+    &:focus{
+      color: $color-alt;
+      background-color: transparent;
+    }
+  }
+
+  .nav-item.active .nav-link{
+    color: $color-alt;
+  }
+} 
+
+.navbar-brand img{
+  max-width: 145px;
+}
+
+.navbar-toggler{
+  border-color: $color-main;
+  margin-left: auto;
+  margin-top: -95px;
+
+  .hamburger{
+    fill: $color-main;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+#free-inspection{
+  background-color: $color-alt-dark;
+  padding: 12px 40px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1em;
+  display: inline-block;
+  margin-bottom: -6px;
+
+  &:hover,
+  &:focus{
+    text-decoration: none;
+    background-color: #380106;
+  }
+}
+
+@include media-breakpoint-down(md){
+  #masthead{
+    .navmenu{
+      text-align: center;
+    }
+
+    #callus{
+      font-size: 30px;
+      margin-bottom:25px;
+
+      .cell-phone{
+        height: 35px;
+      }
+    }
+
+    .social-search{
+      flex-direction: column;
+      align-items: center;
+      
+      .btn-main{
+        margin-bottom: 15px;
+      }
+
+      .social{
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  #free-inspection{
+    margin-top: 20px;
+    display: block;
+  }
+}

@@ -1,0 +1,67 @@
+#block-accordion{
+  max-width: 600px;
+}
+
+#block-accordion .card{
+  border: none;
+}
+
+#block-accordion .card-header{
+  background: transparent;
+  border: none;
+}
+
+#block-accordion .opener{
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  color: #ecb24a;
+  position: relative;
+}
+
+#block-accordion .opener:focus{
+  outline: none;
+}
+
+#block-accordion .opener.collapsed{
+  color: #1e5631;
+}
+
+#block-accordion .opener.collapsed:hover{
+  color: #ecb24a;
+  outline: none;
+}
+
+#block-accordion .opener::after{
+  content: "-";
+  position: absolute;
+  right: -15px;
+}
+
+#block-accordion .opener.collapsed::after{
+  content: "+";
+}
+
+#block-accordion .card-body{
+  padding-top: 0;
+}
+
+#block-accordion .accordion-panel{
+  background-color: #f2f2f2;
+}
+
+#block-accordion .accordion-panel h3{
+  color: #fff;
+  background-color: #ecb24a;
+  text-align: center;
+  padding: 15px;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+#block-accordion .accordion-panel .accordion-panel-body{
+  padding: 15px;
+}

@@ -1,0 +1,147 @@
+.services-tabs .nav-item{
+  margin: 25px;
+}
+.services-tabs .nav-link{
+  background-color: #1e5631;
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+}
+.services-tabs .nav-link::before{
+  content: "";
+  background-image: url(../../images/sprites.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.services-tabs .nav-link:hover,
+.services-tabs .nav-link.active{
+  background-color: #ecb24a;
+}
+
+#species-tabs .nav-link{
+  height: 115px;
+  width: 115px;
+}
+#species-tabs .nav-link::after{
+  content: attr(title);
+  position: absolute;
+  bottom: -26px;
+  color: #1e5631;
+  text-transform: uppercase;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#species-tabs .nav-link#ants-tab::before{
+  background-position: 0px -890px;
+  height: 87px;
+  width: 65px;
+}
+#species-tabs .nav-link#bees-wasps-tab::before{
+  background-position: -220px -890px;
+  height: 97px;
+  width: 83px;
+}
+#species-tabs .nav-link#termites-tab::before{
+  background-position: -470px -890px;
+  height: 88px;
+  width: 49px;
+}
+#species-tabs .nav-link#mice-rodents-tab:before{
+  background-position: 0px -1070px;
+  height: 73px;
+  width: 83px;
+}
+#species-tabs .nav-link#mosquitoes-tab::before{
+  background-position: -260px -1070px;
+  height: 76px;
+  width: 74px;
+}
+#species-tabs .nav-link:hover::after,
+#species-tabs .nav-link.active::after{
+  color: #ecb24a;
+  font-weight: 900;
+}
+
+.services-content .card{
+  border: none;
+  flex-direction: row;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #999;
+  min-height: 300px;
+}
+.services-content .card-img{
+  background-color: #1e5631;
+  position: relative;
+  height: auto;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.services-content .card-img::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../../images/sprites.png);
+  background-repeat: no-repeat;
+}
+.services-content .card-body{
+  background-color: #f2f2f2;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.services-content .card-body h3{
+  font-size: 40px;
+  font-weight: 900;
+  font-style: italic;
+}
+.services-content .card-body a{
+  display: block;
+  color: #1e5631;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: black;
+}
+.services-content .card-body a:hover,
+.services-content .card-body a:focus{
+  color: #ecb24a;
+  text-decoration: none;
+}
+.services-content .card-body .learn-more{
+  font-weight: 700;
+}
+#species-content{
+  max-width: 890px;
+  margin: 60px auto 0px;
+}
+#species-content .card-img{
+  width: 170px;
+}
+#species-content .card-img#ant-img::after{
+  background-position: -80px -891px;
+  height: 165px;
+  width: 122px;
+}
+#species-content .card-img#bees-wasps-img::after{
+  background-position: -320px -890px;
+  height: 157px;
+  width: 133px;
+}
+#species-content .card-img#termites-img::after{
+  background-position: -530px -890px;
+  height: 168px;
+  width: 94px;
+}
+#species-content .card-img#mice-rodents-img::after{
+  background-position: -90px -1070px;
+  height: 138px;
+  width: 157px;
+}
+#species-content .card-img#mosquitoes-img::after{
+  background-position: -350px -1070px;
+  height: 144px;
+  width: 139px;
+}
