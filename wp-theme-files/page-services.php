@@ -4,7 +4,7 @@
   <section id="pricing" style="background-image:url(<?php echo esc_url($pricing_bg['url']); ?>);">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
           <div id="price-card-pro" class="price-card">
             <div class="price-card-title">
               <h3><?php the_field('package_1_title'); ?></h3>
@@ -36,7 +36,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
           <div id="price-card-plus" class="price-card">
             <div class="price-card-title">
               <h3><?php the_field('package_2_title'); ?></h3>
@@ -67,7 +67,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-4">
           <div id="price-card-premier" class="price-card">
             <div class="price-card-title">
               <h3><?php the_field('package_3_title'); ?></h3>
@@ -85,7 +85,7 @@
                     <?php
                       $package_3_logo_img = get_sub_field('logo_image');
                       $package_3_logo_link = get_sub_field('logo_link');
-                      if($logo_link): ?>
+                      if($package_3_logo_link): ?>
                         <a href="<?php echo esc_url($package_3_logo_link); ?>">
                           <img src="<?php echo esc_url($package_3_logo_img['url']); ?>" class="img-fluid d-block ml-auto mb-3" alt="<?php echo esc_attr($package_3_logo_img['alt']); ?>" />
                         </a>
