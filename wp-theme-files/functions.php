@@ -115,7 +115,7 @@ function pestsolutions_left_header_fallback_menu(){ ?>
     <li class="nav-item<?php if(is_page('services')){ echo ' active'; } ?>">
       <a href="<?php echo esc_url(home_url('services')); ?>" class="nav-link"><?php echo esc_html__('Pest Management', 'pestsolutions'); ?></a>
     </li>
-    <li class="nav-item dropdown<?php if($post->post_parent == $services_page_id){ echo ' active'; } ?>">
+    <li class="nav-item dropdown">
       <a href="#" class="nav-link dropdown-toggle text-nowrap" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo esc_html__('Services', 'pestsolutions'); ?></a>
       <ul class="dropdown-menu">
         <li class="nav-item<?php if(is_page('termites')){ echo ' active'; } ?>">
