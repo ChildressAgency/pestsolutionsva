@@ -68,6 +68,10 @@ jQuery(document).ready(function($){
     modal.find('#termite-modal-title').text(termiteModalTitle);
     modal.find('#termite-modal-content').html(termiteModalContent);
   });
+
+  if($('#special-services').length){
+    $('#special-tabs li:first-child a').tab('show');
+  }
 }); //end jquery
 
 /**
