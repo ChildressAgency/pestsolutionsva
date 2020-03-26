@@ -16,8 +16,19 @@
   <header id="header">
     <div id="masthead" class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <div class="collapse navbar-collapse navmenu">
-          <a href="#callus-modal" id="callus" data-toggle="modal" data-target="#callus-modal">
+        <a href="<?php echo esc_url(home_url()); ?>" class="header-logo mr-5">
+          <?php $logo = get_field('logo', 'option'); ?>
+          <img src="<?php echo esc_url($logo['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($logo['alt']); ?>" />
+          <span class="sr-only"><?php echo esc_html(bloginfo('name')); ?></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle Navigation">
+          <svg class="hamburger">
+            <use xlink:href="#icon-bars" />
+          </svg>
+        </button>
+
+        <div class="collapse navbar-collapse navmenu justify-content-end">
+          <a href="#callus-modal" id="callus" class="mr-4" data-toggle="modal" data-target="#callus-modal">
             <svg class="cell-phone">
               <use xlink:href="#icon-cell-phone" />
             </svg>
@@ -57,62 +68,26 @@
       </div><!-- .container-fluid -->
     </div><!-- #masthead -->
 
-    <a href="<?php echo esc_url(home_url()); ?>" class="navbar-brand d-block d-xl-none mr-0">
-      <?php $logo = get_field('logo', 'option'); ?>
-      <img src="<?php echo esc_url($logo['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($logo['alt']); ?>" />
-      <span class="sr-only"><?php echo esc_html(bloginfo('name')); ?></span>
-    </a>
-
     <nav class="navbar navbar-expand-lg pb-0">
       <div class="container-fluid">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle Navigation">
-          <svg class="hamburger">
-            <use xlink:href="#icon-bars" />
-          </svg>
-        </button>
-
-        <div id="header-nav" class="collapse navbar-collapse navmenu">
-          <?php
-            $left_header_nav_args = array(
-              'theme_location' => 'left-header-nav',
-              'menu' => '',
-              'container' => '',
-              'container_id' => '',
-              'container_class' => '',
-              'menu_id' => 'left-header-nav',
-              'menu_class' => 'navbar-nav align-items-center',
-              'echo' => true,
-              'fallback_cb' => 'pestsolutions_left_header_fallback_menu',
-              'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-              'depth' => 2,
-              'walker' => new WP_Bootstrap_Navwalker()
-            );
-            wp_nav_menu($left_header_nav_args);
-          ?>
-
-          <a href="<?php echo esc_url(home_url()); ?>" class="navbar-brand d-none d-xl-flex">
-            <img src="<?php echo esc_url($logo['url']); ?>" class="d-block" alt="<?php echo esc_attr($logo['alt']); ?>" />
-            <span class="sr-only"><?php echo esc_html(bloginfo('name')); ?></span>
-          </a>
-
-          <?php
-            $right_header_nav_args = array(
-              'theme_location' => 'right-header-nav',
-              'menu' => '',
-              'container' => '',
-              'container_id' => '',
-              'container_class' => '',
-              'menu_id' => 'right-header-nav',
-              'menu_class' => 'navbar-nav align-items-center',
-              'echo' => true,
-              'fallback_cb' => 'pestsolutions_right_header_fallback_menu',
-              'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-              'depth' => 2,
-              'walker' => new WP_Bootstrap_Navwalker()
-            );
-            wp_nav_menu($right_header_nav_args);
-          ?>
+        <?php
+          $header_nav_args = array(
+            'theme_location' => 'header-nav',
+            'menu' => '',
+            'container' => 'div',
+            'container_id' => 'header-nav',
+            'container_class' => 'collapse navbar-collapse navmenu',
+            'menu_id' => 'header-nav',
+            'menu_class' => 'navbar-nav align-items-center',
+            'echo' => true,
+            'fallback_cb' => 'pestsolutions_header_fallback_menu',
+            'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'depth' => 2,
+            'walker' => new WP_Bootstrap_Navwalker()
+          );
+          wp_nav_menu($header_nav_args);
+        ?>
           <a href="<?php echo esc_url(home_url('contact-us')); ?>" id="free-inspection" class="ml-auto">Get A Free<br />Inspection</a>
         </div><!-- #header-nav -->
       </div><!-- .container-fluid -->

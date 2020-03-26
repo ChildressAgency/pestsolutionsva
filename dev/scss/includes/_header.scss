@@ -1,3 +1,13 @@
+@include media-breakpoint-up(lg){
+  #header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: #fff;
+  }
+}
 #masthead{
   #callus{
     font-size: 54px;
@@ -5,6 +15,7 @@
     line-height: 1.1em;
     display: inline-block;
     color: $color-main;
+
 
     .cell-phone{
       width: 35px;
@@ -115,7 +126,6 @@
 .navbar-toggler{
   border-color: $color-main;
   margin-left: auto;
-  margin-top: -95px;
 
   .hamburger{
     fill: $color-main;
@@ -133,7 +143,7 @@
   color: #fff;
   line-height: 1em;
   display: inline-block;
-  margin-bottom: -6px;
+  /*margin-bottom: -6px;*/
 
   &:hover,
   &:focus{
@@ -146,6 +156,7 @@
   #masthead{
     .navmenu{
       text-align: center;
+      margin-top: 25px;
     }
 
     #callus{
@@ -174,5 +185,13 @@
   #free-inspection{
     margin-top: 20px;
     display: block;
+  }
+}
+
+@include media-breakpoint-only(xs){
+  .header-logo{
+    img{
+      max-width: 250px;
+    }
   }
 }

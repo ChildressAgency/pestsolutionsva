@@ -4,6 +4,23 @@ body{
   font-size: 16px;
 }
 
+@include media-breakpoint-up(lg){
+  body{
+    padding-top: 272px;
+  }
+}
+@include media-breakpoint-up(xl){
+  body{
+    padding-top: 205px;
+  }
+}
+
+@media (min-width:1379px){
+  body{
+    padding-top: 150px;
+  }
+}
+
 .container-fluid{
   max-width:1400px;
 }

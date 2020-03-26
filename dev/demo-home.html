@@ -18,15 +18,26 @@
   <header id="header">
     <div id="masthead" class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <div class="collapse navbar-collapse navmenu">
-          <a href="#callus-modal" id="callus" data-toggle="modal" data-target="#callus-modal">
+        <a href="#" class="header-logo mr-5">
+          <img src="../wp-theme-files/images/logo-new.png" class="img-fluid d-block" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navmenu" aria-controls="navmenu"
+          aria-expanded="false" aria-label="Toggle Navigation">
+          <svg class="hamburger">
+            <use xlink:href="#icon-bars" />
+          </svg>
+        </button>
+
+        <div class="collapse navbar-collapse navmenu justify-content-end">
+
+          <a href="#callus-modal" id="callus" class="mr-4" data-toggle="modal" data-target="#callus-modal">
             <svg class="cell-phone">
               <use xlink:href="#icon-cell-phone" />
             </svg>
             CALL US
           </a>
 
-          <div class="social-search ml-auto d-flex">
+          <div class="social-search d-flex">
             <a href="#" class="btn-main btn-round bug-crawler mr-lg-4">Client Login</a>
             <div class="social mr-3">
               <a href="#" id="facebook" aria-label="Facebook">
@@ -58,17 +69,9 @@
       </div><!-- .container-fluid -->
     </div><!-- #masthead -->
 
-    <a href="#" class="navbar-brand d-block d-xl-none mr-0">
-      <img src="../wp-theme-files/images/logo.png" class="img-fluid d-block mx-auto" alt="Pest Solutions Logo" />
-    </a>
     <nav class="navbar navbar-expand-lg pb-0">
       <div class="container-fluid">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle Navigation">
-          <svg class="hamburger">
-            <use xlink:href="#icon-bars" />
-          </svg>
-        </button>
 
         <div id="header-nav" class="collapse navbar-collapse navmenu">
           <ul id="left-header-nav" class="navbar-nav align-items-center">
@@ -104,13 +107,6 @@
                 </li>
               </ul>
             </li>
-          </ul>
-
-          <a class="navbar-brand d-none d-xl-flex">
-            <img src="../wp-theme-files/images/logo.png" class="d-block" alt="Pest Solutions Logo" />
-          </a>
-
-          <ul id="right-header-nav" class="navbar-nav align-items-center">
             <li class="nav-item">
               <a href="#" class="nav-link">Do-It-Yourself</a>
             </li>
