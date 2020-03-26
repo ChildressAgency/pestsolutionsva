@@ -36,42 +36,47 @@
     <div class="container">
       <article>
         <?php the_field('construction_pre_treatment_content'); ?>
-        <div class="borate-features">
-          <?php the_field('borate_treatment_features'); ?>
-        </div>
-        <div class="borate-downloads">
-          <div class="borate-download">
-            <?php
-              $doc_1 = get_field('borate_document_1');
-              $doc_1_img = get_field('borate_document_1_image');
-              $doc_1_caption = get_field('borate_document_1_caption');
-            ?>
-            <a href="<?php echo esc_url($doc_1['url']); ?>"><img src="<?php echo esc_url($doc_1_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr(doc_1_img['alt']); ?>" /></a>
-            <?php echo wp_kses_post($doc_1_caption); ?>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="borate-features">
+              <?php the_field('borate_treatment_features'); ?>
+            </div>
+            <div class="borate-downloads">
+              <?php
+                $doc_1 = get_field('borate_document_1');
+                $doc_1_img = get_field('borate_document_1_image');
+                $doc_1_caption = get_field('borate_document_1_caption');
+              
+                if($doc_1): ?>
+                  <div class="borate-download">
+                    <a href="<?php echo esc_url($doc_1['url']); ?>"><img src="<?php echo esc_url($doc_1_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr(doc_1_img['alt']); ?>" /></a>
+                    <?php echo wp_kses_post($doc_1_caption); ?>
+                  </div>
+              <?php endif; ?>
+
+              <?php
+                $doc_2 = get_field('borate_document_2');
+                $doc_2_img = get_field('borate_document_2_image');
+                $doc_2_caption = get_field('borate_document_2_caption');
+            
+                if($doc_2): ?>
+                  <div class="borate-download">
+                    <a href="<?php echo esc_url($doc_2['url']); ?>"><img src="<?php echo esc_url($doc_2_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($doc_2_img['alt']); ?>" /></a>
+                    <?php echo wp_kses_post($doc_2_caption); ?>
+                  </div>
+              <?php endif; ?>
+            </div>
           </div>
-          <div class="borate-download">
-            <?php
-              $doc_2 = get_field('borate_document_2');
-              $doc_2_img = get_field('borate_document_2_image');
-              $doc_2_caption = get_field('borate_document_2_caption');
-            ?>
-            <a href="<?php echo esc_url($doc_2['url']); ?>"><img src="<?php echo esc_url($doc_2_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($doc_2_img['alt']); ?>" /></a>
-            <?php echo wp_kses_post($doc_2_caption); ?>
+          <div class="col-lg-6">
+            <div class="video embed-responsive embed-responsive-16by9">
+              <iframe src="https://www.youtube.com/embed/722S4Dz7fpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item"></iframe>			
+            </div>
           </div>
         </div>
       </article>
     </div>
   </section>
-      <!----YOUTUBE VIDEO---->
-  <section>
-	<div class="container">
-		<div class="video">			
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/722S4Dz7fpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			
-		</div>		
-	</div>
-   </section>
-	
-	
 
   <section id="species-info">
     <div class="container-fluid">
@@ -135,4 +140,20 @@
   </section>
 
 </main>
+  <div id="termite-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="termite-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="termite-modal-title" class="modal-title"></h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="termite-modal-content" class="modal-body">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
 <?php get_footer();
