@@ -50,7 +50,7 @@
               
                 if($doc_1): ?>
                   <div class="borate-download">
-                    <a href="<?php echo esc_url($doc_1['url']); ?>"><img src="<?php echo esc_url($doc_1_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr(doc_1_img['alt']); ?>" /></a>
+                    <a href="<?php echo esc_url($doc_1['url']); ?>"><img src="<?php echo esc_url($doc_1_img['url']); ?>" class="img-fluid d-block mx-auto" alt="<?php echo esc_attr($doc_1_img['alt']); ?>" /></a>
                     <?php echo wp_kses_post($doc_1_caption); ?>
                   </div>
               <?php endif; ?>
