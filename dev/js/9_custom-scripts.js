@@ -110,3 +110,19 @@ $.fn.carouselHeights = function () {
     map = new_map($(this));
   });
 };
+
+function couponForPrint(source) {
+  return "<html><head><script>function step1(){\n" +
+          "setTimeout('step2()', 10);}\n" +
+          "function step2(){window.print();window.close();}\n" +
+          "</scri" + "pt></head><body onload='step1()'>\n" +
+          "<img src='" + source + "' /></body></html>";
+}
+
+function printCoupon(source){
+  pageLink = "about:blank";
+  var pwa = window.open(pageLink, "_new");
+  pwa.document.open();
+  pwa.document.write(couponForPrint(source));
+  pwa.document.close();
+}
