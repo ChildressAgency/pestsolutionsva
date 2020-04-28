@@ -72,6 +72,39 @@ jQuery(document).ready(function($){
   if($('#special-services').length){
     $('#special-tabs li:first-child a').tab('show');
   }
+
+  //////////////////////////////////////////////////////////
+  // ant animation
+  /////////////////////////////////////////////////////////
+
+  var ant = document.querySelector('#ant');
+  var oldPos = { x: 0, y: 0 };
+  var antBox = document.getElementById('ant-box');
+  function ani() {
+    var pos = {
+      x: Math.ceil(Math.random() * antBox.offsetWidth),
+      y: Math.ceil(Math.random() * antBox.offsetHeight)
+    };
+    var dx = -1 * (oldPos.x - pos.x);
+    var dy = -1 * (oldPos.y - pos.y);
+    var theta = Math.atan2(dy, dx) * 180 / Math.PI;
+    t = Math.floor(Math.sqrt(
+      (oldPos.x - pos.x) * (oldPos.x - pos.x)
+      + (oldPos.y - pos.y) * (oldPos.y - pos.y)
+    )) * 8;
+    ant.style.transitionDuration = t + 'ms, ' + t + 'ms';
+    ant.style.left = pos.x + 'px';
+    ant.style.top = pos.y + 'px';
+    ant.style.transform = 'rotate(' + theta + 'deg)';
+    oldPos.x = pos.x;
+    oldPos.y = pos.y;
+    setTimeout(ani, t);
+  }
+  ani();
+
+  /////////////////////////////////////////////////////////
+  // end animation
+  ////////////////////////////////////////////////////////
 }); //end jquery
 
 /**
