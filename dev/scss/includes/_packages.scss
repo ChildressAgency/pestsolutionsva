@@ -1,0 +1,43 @@
+.programs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .program{
+    width: 260px;
+    text-align: center;
+    margin: 25px;
+
+    h3{
+      text-transform: none;
+      margin-bottom: 0;
+    }
+
+    span{
+      font-size: 20px;
+      color: #818181;
+      display: block;
+    }
+
+    p{
+      font-size: 20px;
+      line-height: 1.2em;
+    }
+
+    .price-per-month{
+      font-size: 54px;
+      color: $color-main;
+      font-weight: $font-weight-black;
+    }
+
+    .initial-service{
+      font-weight: $font-weight-bold;
+      color: $color-main;
+    }
+
+    .btn-main{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
